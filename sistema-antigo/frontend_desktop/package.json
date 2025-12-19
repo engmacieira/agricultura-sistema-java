@@ -1,0 +1,69 @@
+{
+  "name": "gestor-sol",
+  "version": "1.0.1",
+  "description": "Sistema de Gestão de Serviços Agrícolas",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "jest",
+    "build": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.28.5",
+    "@babel/preset-env": "^7.28.5",
+    "babel-jest": "^30.2.0",
+    "electron": "^31.0.1",
+    "electron-builder": "^26.0.12",
+    "jest": "^30.2.0",
+    "jest-environment-jsdom": "^30.2.0"
+  },
+  "dependencies": {
+    "electron-log": "^5.4.3",
+    "node-fetch": "^2.7.0"
+  },
+  "build": {
+    "appId": "com.sunnytech.gestorsol",
+    "productName": "Gestor Sol",
+    "files": [
+      "index.html",
+      "main.js",
+      "preload.js",
+      "renderer.js",
+      "style.css",
+      "ui.js",
+      "logo.jpg",
+      "ui_modules/",
+      "ipcHandlers/",
+      "build/icon.ico",
+      "LICENSE.md",
+      "node_modules/",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "extraResources": [
+      {
+        "from": "backend_resources",
+        "to": "backend",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "license": "LICENSE.md"
+    }
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  }
+}
