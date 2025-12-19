@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.agricultura.sistema.controller.ProdutorController"
+            prefHeight="600.0" prefWidth="800.0">
+    
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <top>
+        <Label text="Gestão de Produtores" style="-fx-font-size: 24px; -fx-font-weight: bold;" BorderPane.alignment="CENTER"/>
+    </top>
+
+    <center>
+        <VBox spacing="20">
+            <padding>
+                <Insets top="20"/>
+            </padding>
+            
+            <!-- Formulario -->
+            <TitledPane text="Dados do Produtor" collapsible="false">
+                <GridPane hgap="10" vgap="10">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+                    
+                    <Label text="Nome:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <TextField fx:id="txtNome" GridPane.columnIndex="1" GridPane.rowIndex="0" promptText="Nome completo"/>
+                    
+                    <Label text="Apelido:" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                    <TextField fx:id="txtApelido" GridPane.columnIndex="3" GridPane.rowIndex="0" promptText="Apelido"/>
+                    
+                    <Label text="CPF/CNPJ:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                    <TextField fx:id="txtCpf" GridPane.columnIndex="1" GridPane.rowIndex="1" promptText="000.000.000-00"/>
+                    
+                    <Label text="Região:" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                    <TextField fx:id="txtRegiao" GridPane.columnIndex="3" GridPane.rowIndex="1" promptText="Região"/>
+                    
+                    <Label text="Referência:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                    <TextField fx:id="txtReferencia" GridPane.columnIndex="1" GridPane.rowIndex="2" promptText="Referência"/>
+                    
+                    <Label text="Telefone:" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+                    <TextField fx:id="txtTelefone" GridPane.columnIndex="3" GridPane.rowIndex="2" promptText="(00) 00000-0000"/>
+                </GridPane>
+            </TitledPane>
+            
+            <!-- Botoes -->
+            <ButtonBar>
+                <buttons>
+                    <Button text="Novo / Limpar" onAction="#onLimpar"/>
+                    <Button text="Salvar" onAction="#onSalvar" defaultButton="true"/>
+                </buttons>
+            </ButtonBar>
+
+            <!-- Tabela -->
+            <TableView fx:id="tabelaProdutores" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="colId" text="ID" prefWidth="50">
+                        <cellValueFactory><PropertyValueFactory property="id"/></cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="colNome" text="Nome" prefWidth="200">
+                        <cellValueFactory><PropertyValueFactory property="nome"/></cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="colApelido" text="Apelido" prefWidth="100">
+                        <cellValueFactory><PropertyValueFactory property="apelido"/></cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="colCpf" text="CPF" prefWidth="120">
+                        <cellValueFactory><PropertyValueFactory property="cpf"/></cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="colRegiao" text="Região" prefWidth="100">
+                        <cellValueFactory><PropertyValueFactory property="regiao"/></cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="colTelefone" text="Telefone" prefWidth="120">
+                        <cellValueFactory><PropertyValueFactory property="telefone"/></cellValueFactory>
+                    </TableColumn>
+                </columns>
+                <columnResizePolicy>
+                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                </columnResizePolicy>
+            </TableView>
+        </VBox>
+    </center>
+
+    <bottom>
+        <ButtonBar>
+            <padding>
+                <Insets top="10"/>
+            </padding>
+            <buttons>
+                <Button text="Editar Selecionado" onAction="#onEditar"/>
+                <Button text="Excluir Selecionado" onAction="#onExcluir" style="-fx-text-fill: red;"/>
+            </buttons>
+        </ButtonBar>
+    </bottom>
+
+</BorderPane>
