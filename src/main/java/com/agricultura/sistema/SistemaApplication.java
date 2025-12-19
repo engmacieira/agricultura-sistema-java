@@ -27,12 +27,12 @@ public class SistemaApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/produtor.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/main.fxml"));
         fxmlLoader.setControllerFactory(springContext::getBean);
         Parent root = fxmlLoader.load();
 
         Scene scene = new Scene(root);
-        primaryStage.setTitle("Gestão de Produtores");
+        primaryStage.setTitle("Sistema de Gestão Agrícola");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
