@@ -47,6 +47,16 @@ public class MainController {
     }
 
     @FXML
+    public void onRelatoriosClick() {
+        loadView("/fxml/relatorio.fxml");
+    }
+
+    @FXML
+    public void onAdminClick() {
+        loadView("/fxml/admin.fxml");
+    }
+
+    @FXML
     public void onSairClick() {
         Platform.exit();
         System.exit(0);

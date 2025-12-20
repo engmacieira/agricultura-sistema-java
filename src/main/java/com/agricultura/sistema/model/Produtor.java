@@ -35,6 +35,11 @@ public class Produtor {
 
     private String telefone;
 
+    @OneToMany(mappedBy = "produtor", fetch = FetchType.LAZY)
+    @lombok.ToString.Exclude
+    @lombok.EqualsAndHashCode.Exclude
+    private java.util.List<Execucao> execucoes;
+
     @Column(name = "deletado_em")
     private java.time.LocalDateTime deletadoEm;
 }

@@ -37,4 +37,9 @@ public class Execucao {
 
     @Column(name = "valor_total")
     private BigDecimal valorTotal;
+
+    @OneToMany(mappedBy = "execucao", fetch = FetchType.LAZY)
+    @lombok.ToString.Exclude
+    @lombok.EqualsAndHashCode.Exclude
+    private java.util.List<Pagamento> pagamentos;
 }
