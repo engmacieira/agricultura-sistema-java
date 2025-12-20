@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.math.RoundingMode;
 
 @Service
 public class ExecucaoService {
@@ -75,7 +76,9 @@ public class ExecucaoService {
         }
 
         BigDecimal valorUnitario = execucao.getServico().getValorUnitario();
-        BigDecimal valorTotal = valorUnitario.multiply(execucao.getHorasPrestadas());
+
+        BigDecimal valorTotal = valorUnitario.multiply(execucao.getHorasPrestadas())
+                .setScale(2, RoundingMode.HALF_UP);
 
         execucao.setValorTotal(valorTotal);
     }

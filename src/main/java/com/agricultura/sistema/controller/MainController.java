@@ -42,6 +42,11 @@ public class MainController {
     }
 
     @FXML
+    public void onPagamentosClick() {
+        loadView("/fxml/pagamento.fxml");
+    }
+
+    @FXML
     public void onSairClick() {
         Platform.exit();
         System.exit(0);
