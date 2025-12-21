@@ -19,6 +19,7 @@ public class Execucao {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "execucao_id")
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)

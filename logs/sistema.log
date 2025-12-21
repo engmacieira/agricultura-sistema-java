@@ -17,3 +17,220 @@
 2025-12-21 12:51:13.468 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-12-21 12:51:13.472 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2025-12-21 12:51:13.480 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 13:08:17.245 [JavaFX-Launcher] INFO  o.s.boot.SpringApplication - Starting application using Java 21.0.9 with PID 22420 (started by mathe in e:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 13:08:17.251 [JavaFX-Launcher] INFO  o.s.boot.SpringApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 13:08:18.368 [JavaFX-Launcher] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 13:08:18.605 [JavaFX-Launcher] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 171 ms. Found 4 JPA repository interfaces.
+2025-12-21 13:08:19.861 [JavaFX-Launcher] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 13:08:19.985 [JavaFX-Launcher] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 13:08:20.033 [JavaFX-Launcher] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 13:08:20.637 [JavaFX-Launcher] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 13:08:20.685 [JavaFX-Launcher] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 13:08:20.898 [JavaFX-Launcher] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@6a92429
+2025-12-21 13:08:20.902 [JavaFX-Launcher] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 13:08:22.804 [JavaFX-Launcher] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 13:08:22.889 [JavaFX-Launcher] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 13:08:24.648 [JavaFX-Launcher] INFO  o.s.boot.SpringApplication - Started application in 8.542 seconds (process running for 10.984)
+2025-12-21 13:08:24.668 [JavaFX-Launcher] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_13-08-24.db. Backups mantidos: 7
+2025-12-21 13:08:24.872 [JavaFX Application Thread] WARN  javafx - Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 17.0.8
+2025-12-21 13:09:30.184 [JavaFX Application Thread] WARN  javafx - Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 17.0.8
+2025-12-21 13:09:30.394 [JavaFX Application Thread] WARN  javafx - Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 17.0.8
+2025-12-21 13:09:34.340 [JavaFX Application Thread] WARN  javafx - Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 17.0.8
+2025-12-21 13:09:34.434 [JavaFX Application Thread] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: null
+2025-12-21 13:09:34.434 [JavaFX Application Thread] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Error parsing date
+2025-12-21 13:09:37.936 [JavaFX Application Thread] WARN  javafx - Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 17.0.8
+2025-12-21 13:09:37.991 [JavaFX Application Thread] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: null
+2025-12-21 13:09:37.992 [JavaFX Application Thread] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Error parsing date
+2025-12-21 13:09:45.094 [JavaFX Application Thread] WARN  javafx - Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 17.0.8
+2025-12-21 13:09:45.169 [JavaFX Application Thread] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: null
+2025-12-21 13:09:45.170 [JavaFX Application Thread] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Error parsing date
+2025-12-21 13:09:46.662 [JavaFX Application Thread] WARN  javafx - Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 17.0.8
+2025-12-21 13:09:46.701 [JavaFX Application Thread] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: null
+2025-12-21 13:09:46.701 [JavaFX Application Thread] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Error parsing date
+2025-12-21 13:09:46.828 [JavaFX Application Thread] WARN  javafx - Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 17.0.8
+2025-12-21 13:09:46.866 [JavaFX Application Thread] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: null
+2025-12-21 13:09:46.867 [JavaFX Application Thread] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Error parsing date
+2025-12-21 13:09:47.974 [JavaFX Application Thread] WARN  javafx - Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 17.0.8
+2025-12-21 13:09:48.020 [JavaFX Application Thread] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: null
+2025-12-21 13:09:48.020 [JavaFX Application Thread] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Error parsing date
+2025-12-21 13:09:51.181 [JavaFX Application Thread] WARN  javafx - Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 17.0.8
+2025-12-21 13:09:51.248 [JavaFX Application Thread] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: null
+2025-12-21 13:09:51.249 [JavaFX Application Thread] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Error parsing date
+2025-12-21 13:09:51.490 [JavaFX Application Thread] WARN  javafx - Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 17.0.8
+2025-12-21 13:09:51.567 [JavaFX Application Thread] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: null
+2025-12-21 13:09:51.569 [JavaFX Application Thread] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Error parsing date
+2025-12-21 13:09:52.708 [JavaFX Application Thread] WARN  javafx - Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 17.0.8
+2025-12-21 13:09:52.736 [JavaFX Application Thread] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: null
+2025-12-21 13:09:52.736 [JavaFX Application Thread] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Error parsing date
+2025-12-21 13:10:01.481 [JavaFX Application Thread] WARN  javafx - Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 17.0.8
+2025-12-21 13:10:01.511 [JavaFX Application Thread] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: null
+2025-12-21 13:10:01.512 [JavaFX Application Thread] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Error parsing date
+2025-12-21 13:10:02.266 [JavaFX Application Thread] WARN  javafx - Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 17.0.8
+2025-12-21 13:10:32.626 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 13:10:32.630 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 13:10:32.636 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 13:24:59.579 [JavaFX-Launcher] INFO  o.s.boot.SpringApplication - Starting application using Java 21.0.9 with PID 16148 (started by mathe in e:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 13:24:59.583 [JavaFX-Launcher] INFO  o.s.boot.SpringApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 13:25:01.062 [JavaFX-Launcher] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 13:25:01.277 [JavaFX-Launcher] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 158 ms. Found 4 JPA repository interfaces.
+2025-12-21 13:25:02.980 [JavaFX-Launcher] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 13:25:03.182 [JavaFX-Launcher] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 13:25:03.363 [JavaFX-Launcher] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 13:25:03.945 [JavaFX-Launcher] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 13:25:03.996 [JavaFX-Launcher] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 13:25:04.260 [JavaFX-Launcher] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@60553194
+2025-12-21 13:25:04.263 [JavaFX-Launcher] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 13:25:06.385 [JavaFX-Launcher] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 13:25:06.457 [JavaFX-Launcher] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 13:25:08.732 [JavaFX-Launcher] INFO  o.s.boot.SpringApplication - Started application in 10.37 seconds (process running for 13.231)
+2025-12-21 13:25:08.747 [JavaFX-Launcher] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_13-25-08.db. Backups mantidos: 8
+2025-12-21 13:25:08.948 [JavaFX Application Thread] WARN  javafx - Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 17.0.8
+2025-12-21 13:25:10.006 [JavaFX Application Thread] INFO  javafx.css - Could not find stylesheet: file:/E:/Projetos%20VSCODE/refatoracao-agricultura-java/target/classes/styles.css
+2025-12-21 13:25:17.717 [JavaFX Application Thread] WARN  javafx - Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 17.0.8
+2025-12-21 13:25:18.809 [JavaFX Application Thread] WARN  javafx - Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 17.0.8
+2025-12-21 13:25:18.885 [JavaFX Application Thread] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: null
+2025-12-21 13:25:18.885 [JavaFX Application Thread] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Error parsing date
+2025-12-21 13:25:19.927 [JavaFX Application Thread] WARN  javafx - Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 17.0.8
+2025-12-21 13:25:19.961 [JavaFX Application Thread] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: null
+2025-12-21 13:25:19.962 [JavaFX Application Thread] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Error parsing date
+2025-12-21 13:25:20.758 [JavaFX Application Thread] WARN  javafx - Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 17.0.8
+2025-12-21 13:25:25.140 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 13:25:25.148 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 13:25:25.154 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 13:29:36.217 [JavaFX-Launcher] INFO  o.s.boot.SpringApplication - Starting application using Java 21.0.9 with PID 18332 (started by mathe in e:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 13:29:36.223 [JavaFX-Launcher] INFO  o.s.boot.SpringApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 13:29:37.570 [JavaFX-Launcher] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 13:29:37.874 [JavaFX-Launcher] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 245 ms. Found 4 JPA repository interfaces.
+2025-12-21 13:29:39.289 [JavaFX-Launcher] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 13:29:39.870 [JavaFX-Launcher] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 13:29:39.973 [JavaFX-Launcher] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 13:29:40.560 [JavaFX-Launcher] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 13:29:40.597 [JavaFX-Launcher] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 13:29:40.837 [JavaFX-Launcher] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@39db719c
+2025-12-21 13:29:40.842 [JavaFX-Launcher] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 13:29:43.086 [JavaFX-Launcher] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 13:29:43.159 [JavaFX-Launcher] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 13:29:45.379 [JavaFX-Launcher] INFO  o.s.boot.SpringApplication - Started application in 10.527 seconds (process running for 12.684)
+2025-12-21 13:29:45.481 [JavaFX-Launcher] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_13-29-45.db. Backups mantidos: 9
+2025-12-21 13:29:45.612 [JavaFX Application Thread] WARN  javafx - Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 17.0.8
+2025-12-21 13:29:46.720 [JavaFX Application Thread] INFO  javafx.css - Could not find stylesheet: file:/E:/Projetos%20VSCODE/refatoracao-agricultura-java/target/classes/styles.css
+2025-12-21 13:29:56.097 [JavaFX Application Thread] WARN  javafx - Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 17.0.8
+2025-12-21 13:30:00.264 [JavaFX Application Thread] WARN  javafx - Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 17.0.8
+2025-12-21 13:30:05.190 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 13:30:05.199 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 13:30:05.206 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 13:31:41.567 [JavaFX-Launcher] INFO  o.s.boot.SpringApplication - Starting application using Java 21.0.9 with PID 31640 (started by mathe in e:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 13:31:41.572 [JavaFX-Launcher] INFO  o.s.boot.SpringApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 13:31:43.111 [JavaFX-Launcher] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 13:31:43.443 [JavaFX-Launcher] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 257 ms. Found 4 JPA repository interfaces.
+2025-12-21 13:31:44.964 [JavaFX-Launcher] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 13:31:45.352 [JavaFX-Launcher] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 13:31:45.455 [JavaFX-Launcher] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 13:31:46.067 [JavaFX-Launcher] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 13:31:46.121 [JavaFX-Launcher] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 13:31:46.352 [JavaFX-Launcher] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@6733add3
+2025-12-21 13:31:46.357 [JavaFX-Launcher] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 13:31:48.334 [JavaFX-Launcher] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 13:31:48.402 [JavaFX-Launcher] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 13:31:51.260 [JavaFX-Launcher] INFO  o.s.boot.SpringApplication - Started application in 10.943 seconds (process running for 13.035)
+2025-12-21 13:31:51.273 [JavaFX-Launcher] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_13-31-51.db. Backups mantidos: 10
+2025-12-21 13:31:51.465 [JavaFX Application Thread] WARN  javafx - Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 17.0.8
+2025-12-21 13:32:00.440 [JavaFX Application Thread] WARN  javafx - Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 17.0.8
+2025-12-21 13:32:12.900 [JavaFX Application Thread] WARN  javafx - Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 17.0.8
+2025-12-21 13:32:12.992 [JavaFX Application Thread] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: null
+2025-12-21 13:32:12.992 [JavaFX Application Thread] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Error parsing date
+2025-12-21 13:32:15.833 [JavaFX Application Thread] WARN  javafx - Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 17.0.8
+2025-12-21 13:32:19.536 [JavaFX Application Thread] WARN  javafx - Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 17.0.8
+2025-12-21 13:32:23.150 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 13:32:23.154 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 13:32:23.161 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 13:37:51.577 [JavaFX-Launcher] INFO  o.s.boot.SpringApplication - Starting application using Java 21.0.9 with PID 23256 (started by mathe in e:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 13:37:51.583 [JavaFX-Launcher] INFO  o.s.boot.SpringApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 13:37:52.869 [JavaFX-Launcher] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 13:37:53.128 [JavaFX-Launcher] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 176 ms. Found 4 JPA repository interfaces.
+2025-12-21 13:37:54.691 [JavaFX-Launcher] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 13:37:55.334 [JavaFX-Launcher] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 13:37:55.496 [JavaFX-Launcher] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 13:37:56.130 [JavaFX-Launcher] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 13:37:56.168 [JavaFX-Launcher] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 13:37:56.439 [JavaFX-Launcher] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@156a3b94
+2025-12-21 13:37:56.443 [JavaFX-Launcher] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 13:37:58.508 [JavaFX-Launcher] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 13:37:58.558 [JavaFX-Launcher] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 13:38:01.063 [JavaFX-Launcher] INFO  o.s.boot.SpringApplication - Started application in 10.826 seconds (process running for 13.062)
+2025-12-21 13:38:01.090 [JavaFX-Launcher] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_13-25-08.db
+2025-12-21 13:38:01.092 [JavaFX-Launcher] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_13-38-01.db. Backups mantidos: 10
+2025-12-21 13:38:01.325 [JavaFX Application Thread] WARN  javafx - Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 17.0.8
+2025-12-21 13:38:24.729 [JavaFX Application Thread] INFO  c.a.sistema.service.ProdutorService - Produtor atualizado! ID: 4
+2025-12-21 13:38:34.326 [JavaFX Application Thread] WARN  javafx - Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 17.0.8
+2025-12-21 13:38:36.384 [JavaFX Application Thread] WARN  javafx - Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 17.0.8
+2025-12-21 13:38:40.329 [JavaFX Application Thread] WARN  javafx - Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 17.0.8
+2025-12-21 13:38:45.822 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 13:38:45.827 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 13:38:45.834 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 13:50:24.420 [JavaFX-Launcher] INFO  o.s.boot.SpringApplication - Starting application using Java 21.0.9 with PID 18520 (started by mathe in e:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 13:50:24.426 [JavaFX-Launcher] INFO  o.s.boot.SpringApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 13:50:25.877 [JavaFX-Launcher] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 13:50:26.166 [JavaFX-Launcher] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 213 ms. Found 4 JPA repository interfaces.
+2025-12-21 13:50:27.583 [JavaFX-Launcher] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 13:50:27.841 [JavaFX-Launcher] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 13:50:27.936 [JavaFX-Launcher] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 13:50:28.572 [JavaFX-Launcher] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 13:50:28.618 [JavaFX-Launcher] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 13:50:28.861 [JavaFX-Launcher] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@490acf75
+2025-12-21 13:50:28.864 [JavaFX-Launcher] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 13:50:31.069 [JavaFX-Launcher] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 13:50:31.143 [JavaFX-Launcher] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 13:50:33.447 [JavaFX-Launcher] INFO  o.s.boot.SpringApplication - Started application in 10.303 seconds (process running for 13.211)
+2025-12-21 13:50:33.471 [JavaFX-Launcher] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_13-29-45.db
+2025-12-21 13:50:33.472 [JavaFX-Launcher] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_13-50-33.db. Backups mantidos: 10
+2025-12-21 13:50:33.571 [JavaFX Application Thread] WARN  javafx - Loading FXML document with JavaFX API of version 21 by JavaFX runtime of version 17.0.8
+2025-12-21 13:51:14.513 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 13:51:14.522 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 13:51:14.529 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 14:06:12.305 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Starting ProdutorE2ETest using Java 21.0.9 with PID 3892 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 14:06:12.307 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 14:06:13.505 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 14:06:13.825 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 281 ms. Found 4 JPA repository interfaces.
+2025-12-21 14:06:15.253 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 14:06:15.477 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 14:06:15.699 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 14:06:16.258 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 14:06:16.313 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 14:06:16.558 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@72af90e8
+2025-12-21 14:06:16.563 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 14:06:18.505 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 14:06:18.563 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:06:20.479 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Started ProdutorE2ETest in 9.259 seconds (process running for 12.545)
+2025-12-21 14:06:20.530 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_13-31-51.db
+2025-12-21 14:06:20.532 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_14-06-20.db. Backups mantidos: 10
+2025-12-21 14:06:20.578 [JavaFX-Launcher] WARN  javafx - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @5579bb86'
+2025-12-21 14:06:25.272 [main] INFO  c.a.sistema.service.ProdutorService - Soft delete do Produtor ID: 1 realizado com sucesso.
+2025-12-21 14:06:25.315 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.agricultura.sistema.SistemaApplicationTests]: SistemaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-12-21 14:06:25.351 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.agricultura.sistema.SistemaApplication for test class com.agricultura.sistema.SistemaApplicationTests
+2025-12-21 14:06:25.418 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:06:25.429 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 14:06:25.442 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 14:11:05.005 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Starting ProdutorE2ETest using Java 21.0.9 with PID 31584 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 14:11:05.005 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 14:11:06.302 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 14:11:06.520 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 162 ms. Found 4 JPA repository interfaces.
+2025-12-21 14:11:08.197 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 14:11:08.470 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 14:11:08.657 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 14:11:09.147 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 14:11:09.183 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 14:11:09.451 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@10ed037a
+2025-12-21 14:11:09.456 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 14:11:11.330 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 14:11:11.384 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:11:13.791 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Started ProdutorE2ETest in 9.704 seconds (process running for 12.179)
+2025-12-21 14:11:13.821 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_13-38-01.db
+2025-12-21 14:11:13.822 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_14-11-13.db. Backups mantidos: 10
+2025-12-21 14:11:14.016 [JavaFX-Launcher] WARN  javafx - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @5579bb86'
+2025-12-21 14:11:18.847 [main] INFO  c.a.sistema.service.ProdutorService - Soft delete do Produtor ID: 1 realizado com sucesso.
+2025-12-21 14:11:18.886 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.agricultura.sistema.SistemaApplicationTests]: SistemaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-12-21 14:11:18.921 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.agricultura.sistema.SistemaApplication for test class com.agricultura.sistema.SistemaApplicationTests
+2025-12-21 14:11:18.989 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:11:18.998 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 14:11:19.009 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

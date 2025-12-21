@@ -18,6 +18,7 @@ public class Servico {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "servico_id")
     private Long id;
 
     @Column(nullable = false)

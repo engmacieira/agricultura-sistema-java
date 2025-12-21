@@ -3,6 +3,7 @@ com\agricultura\sistema\SistemaApplication.class
 com\agricultura\sistema\repository\ServicoRepository.class
 com\agricultura\sistema\controller\ExecucaoController$1.class
 com\agricultura\sistema\repository\ExecucaoRepository.class
+com\agricultura\sistema\service\BackupService.class
 com\agricultura\sistema\service\RelatorioService.class
 com\agricultura\sistema\model\Servico.class
 com\agricultura\sistema\controller\RelatorioController$1.class
@@ -11,6 +12,7 @@ com\agricultura\sistema\controller\MainController.class
 com\agricultura\sistema\controller\RelatorioController.class
 com\agricultura\sistema\model\Execucao.class
 com\agricultura\sistema\repository\ProdutorRepository.class
+com\agricultura\sistema\controller\AdminController.class
 com\agricultura\sistema\service\PagamentoService.class
 com\agricultura\sistema\model\Execucao$ExecucaoBuilder.class
 com\agricultura\sistema\model\Produtor$ProdutorBuilder.class

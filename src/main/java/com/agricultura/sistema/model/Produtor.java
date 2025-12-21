@@ -20,6 +20,7 @@ public class Produtor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "produtor_id")
     private Long id;
 
     @Column(nullable = false)

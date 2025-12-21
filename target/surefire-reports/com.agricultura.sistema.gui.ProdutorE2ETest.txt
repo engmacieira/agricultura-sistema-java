@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: com.agricultura.sistema.gui.ProdutorE2ETest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 13.95 s <<< FAILURE! -- in com.agricultura.sistema.gui.ProdutorE2ETest
+com.agricultura.sistema.gui.ProdutorE2ETest.testCadastrarProdutor(FxRobot) -- Time elapsed: 3.041 s <<< ERROR!
+org.testfx.api.FxRobotException: the query "Produtores" returned no nodes.
+	at org.testfx.api.FxRobot.queryVisibleNode(FxRobot.java:949)
+	at org.testfx.api.FxRobot.pointOfVisibleNode(FxRobot.java:922)
+	at org.testfx.api.FxRobot.clickOn(FxRobot.java:630)
+	at org.testfx.api.FxRobot.clickOn(FxRobot.java:59)
+	at org.testfx.api.FxRobotInterface.clickOn(FxRobotInterface.java:639)
+	at com.agricultura.sistema.gui.ProdutorE2ETest.testCadastrarProdutor(ProdutorE2ETest.java:18)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+

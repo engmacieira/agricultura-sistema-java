@@ -4,21 +4,41 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.agricultura.sistema.controller.AdminController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-    </padding>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.agricultura.sistema.controller.AdminController"
+      spacing="20" styleClass="background">
 
-    <Label text="Painel de Administração">
-        <font>
-            <Font size="24.0" />
-        </font>
-    </Label>
+    <Label text="Painel de Administração" styleClass="page-header"/>
 
-    <Button onAction="#onRestaurarBackup" text="♻️ Restaurar Backup" style="-fx-font-size: 16px; -fx-padding: 10 20;">
-    </Button>
-    
-    <Label text="Atenção: A restauração de backup substituirá todos os dados atuais." textFill="RED" />
+    <VBox styleClass="card" spacing="15" maxWidth="600">
+        <HBox alignment="CENTER_LEFT" spacing="10">
+            <Label text="📦" style="-fx-font-size: 24px;"/>
+            <VBox>
+                <Label text="Backup e Restauração" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+                <Label text="Gerencie a segurança dos dados do sistema." style="-fx-text-fill: #7f8c8d;"/>
+            </VBox>
+        </HBox>
+
+        <Region prefHeight="10"/>
+
+        <Label text="Restaurar Ponto Anterior" style="-fx-font-weight: bold;"/>
+        <Label text="Atenção: Esta ação irá substituir todos os dados atuais pelo arquivo de backup selecionado. Certifique-se do que está fazendo." 
+               wrapText="true" 
+               style="-fx-text-fill: #e74c3c; -fx-background-color: #fdedec; -fx-padding: 10; -fx-background-radius: 4; -fx-border-color: #e74c3c; -fx-border-width: 0 0 0 3;"/>
+
+        <HBox alignment="CENTER_RIGHT" spacing="10">
+             <Button onAction="#onRestaurarBackup" text="♻️ Restaurar Backup..." styleClass="button, btn-danger"/>
+        </HBox>
+    </VBox>
+
+    <VBox styleClass="card" spacing="15" maxWidth="600" opacity="0.6">
+        <Label text="Configurações do Sistema" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+        <Label text="Novas funcionalidades administrativas serão adicionadas aqui em breve." style="-fx-text-fill: #95a5a6; -fx-font-style: italic;"/>
+    </VBox>
+
 </VBox>
