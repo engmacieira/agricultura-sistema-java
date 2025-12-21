@@ -3,6 +3,7 @@ package com.agricultura.sistema.controller;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.application.Platform;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,21 @@ public class MainController {
 
     @FXML
     private StackPane contentArea;
+
+    @FXML
+    private Button btnProdutores;
+    @FXML
+    private Button btnServicos;
+    @FXML
+    private Button btnExecucoes;
+    @FXML
+    private Button btnPagamentos;
+    @FXML
+    private Button btnRelatorios;
+    @FXML
+    private Button btnAdmin;
+    @FXML
+    private Button btnSair;
 
     @Autowired
     private ApplicationContext applicationContext;

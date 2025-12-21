@@ -26,4 +26,7 @@ public class Servico {
 
     @Column(name = "valor_unitario")
     private BigDecimal valorUnitario;
+
+    @Column
+    private String descricao;
 }

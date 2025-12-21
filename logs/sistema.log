@@ -234,3 +234,602 @@
 2025-12-21 14:11:18.989 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-12-21 14:11:18.998 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2025-12-21 14:11:19.009 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 14:33:38.872 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Starting ProdutorE2ETest using Java 21.0.9 with PID 8552 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 14:33:38.874 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 14:33:39.763 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 14:33:39.899 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 118 ms. Found 4 JPA repository interfaces.
+2025-12-21 14:33:40.910 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 14:33:41.083 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 14:33:41.175 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 14:33:41.575 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 14:33:41.610 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 14:33:41.824 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@55d8c2c4
+2025-12-21 14:33:41.827 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 14:33:43.451 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 14:33:43.914 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:33:45.559 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Started ProdutorE2ETest in 7.562 seconds (process running for 9.591)
+2025-12-21 14:33:45.583 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_13-50-33.db
+2025-12-21 14:33:45.583 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_14-33-45.db. Backups mantidos: 10
+2025-12-21 14:33:45.698 [JavaFX-Launcher] WARN  javafx - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @5579bb86'
+2025-12-21 14:33:49.997 [main] INFO  c.a.sistema.service.ProdutorService - Soft delete do Produtor ID: 1 realizado com sucesso.
+2025-12-21 14:33:50.238 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.agricultura.sistema.SistemaApplicationTests]: SistemaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-12-21 14:33:50.281 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.agricultura.sistema.SistemaApplication for test class com.agricultura.sistema.SistemaApplicationTests
+2025-12-21 14:33:50.374 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:33:50.388 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 14:33:50.414 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 14:34:28.278 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Starting ProdutorE2ETest using Java 21.0.9 with PID 12624 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 14:34:28.282 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 14:34:29.116 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 14:34:29.272 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 129 ms. Found 4 JPA repository interfaces.
+2025-12-21 14:34:30.156 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 14:34:30.325 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 14:34:30.403 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 14:34:30.801 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 14:34:30.830 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 14:34:31.025 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@55d8c2c4
+2025-12-21 14:34:31.030 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 14:34:32.648 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 14:34:32.705 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:34:34.039 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Started ProdutorE2ETest in 6.566 seconds (process running for 8.751)
+2025-12-21 14:34:34.063 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_14-06-20.db
+2025-12-21 14:34:34.063 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_14-34-34.db. Backups mantidos: 10
+2025-12-21 14:34:34.160 [JavaFX-Launcher] WARN  javafx - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @5579bb86'
+2025-12-21 14:34:37.903 [main] INFO  c.a.sistema.service.ProdutorService - Soft delete do Produtor ID: 1 realizado com sucesso.
+2025-12-21 14:34:38.096 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.agricultura.sistema.SistemaApplicationTests]: SistemaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-12-21 14:34:38.130 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.agricultura.sistema.SistemaApplication for test class com.agricultura.sistema.SistemaApplicationTests
+2025-12-21 14:34:38.198 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:34:38.204 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 14:34:38.214 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 14:37:27.982 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Starting ProdutorE2ETest using Java 21.0.9 with PID 28992 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 14:37:27.983 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 14:37:28.854 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 14:37:28.983 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 114 ms. Found 4 JPA repository interfaces.
+2025-12-21 14:37:29.970 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 14:37:30.104 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 14:37:30.165 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 14:37:30.533 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 14:37:30.563 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 14:37:30.785 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@6c07ad6b
+2025-12-21 14:37:30.790 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 14:37:32.305 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 14:37:32.363 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:37:33.734 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Started ProdutorE2ETest in 6.559 seconds (process running for 8.59)
+2025-12-21 14:37:33.759 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_14-11-13.db
+2025-12-21 14:37:33.760 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_14-37-33.db. Backups mantidos: 10
+2025-12-21 14:37:33.824 [JavaFX-Launcher] WARN  javafx - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @5579bb86'
+2025-12-21 14:37:37.797 [main] INFO  c.a.sistema.service.ProdutorService - Soft delete do Produtor ID: 1 realizado com sucesso.
+2025-12-21 14:37:38.059 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.agricultura.sistema.SistemaApplicationTests]: SistemaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-12-21 14:37:38.093 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.agricultura.sistema.SistemaApplication for test class com.agricultura.sistema.SistemaApplicationTests
+2025-12-21 14:37:38.174 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:37:38.183 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 14:37:38.197 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 14:38:04.440 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Starting ProdutorE2ETest using Java 21.0.9 with PID 2388 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 14:38:04.443 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 14:38:05.388 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 14:38:05.556 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 131 ms. Found 4 JPA repository interfaces.
+2025-12-21 14:38:06.655 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 14:38:06.822 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 14:38:06.897 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 14:38:07.305 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 14:38:07.339 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 14:38:07.591 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@72af90e8
+2025-12-21 14:38:07.593 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 14:38:09.122 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 14:38:09.172 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:38:10.746 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Started ProdutorE2ETest in 7.275 seconds (process running for 9.493)
+2025-12-21 14:38:10.760 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-19_23-55-53.db
+2025-12-21 14:38:10.763 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_14-38-10.db. Backups mantidos: 10
+2025-12-21 14:38:10.844 [JavaFX-Launcher] WARN  javafx - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @5579bb86'
+2025-12-21 14:38:14.940 [main] INFO  c.a.sistema.service.ProdutorService - Soft delete do Produtor ID: 1 realizado com sucesso.
+2025-12-21 14:38:15.182 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.agricultura.sistema.SistemaApplicationTests]: SistemaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-12-21 14:38:15.219 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.agricultura.sistema.SistemaApplication for test class com.agricultura.sistema.SistemaApplicationTests
+2025-12-21 14:38:15.311 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:38:15.321 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 14:38:15.338 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 14:38:47.633 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Starting ProdutorE2ETest using Java 21.0.9 with PID 26464 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 14:38:47.638 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 14:38:48.710 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 14:38:48.853 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 128 ms. Found 4 JPA repository interfaces.
+2025-12-21 14:38:49.928 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 14:38:50.060 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 14:38:50.135 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 14:38:50.539 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 14:38:50.567 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 14:38:50.751 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@489110c2
+2025-12-21 14:38:50.753 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 14:38:52.554 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 14:38:52.630 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:38:54.220 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Started ProdutorE2ETest in 7.484 seconds (process running for 9.911)
+2025-12-21 14:38:54.243 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-19_23-57-30.db
+2025-12-21 14:38:54.245 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_14-38-54.db. Backups mantidos: 10
+2025-12-21 14:38:54.333 [JavaFX-Launcher] WARN  javafx - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @5579bb86'
+2025-12-21 14:38:58.552 [main] INFO  c.a.sistema.service.ProdutorService - Soft delete do Produtor ID: 1 realizado com sucesso.
+2025-12-21 14:38:58.762 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.agricultura.sistema.SistemaApplicationTests]: SistemaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-12-21 14:38:58.790 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.agricultura.sistema.SistemaApplication for test class com.agricultura.sistema.SistemaApplicationTests
+2025-12-21 14:38:58.855 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:38:58.866 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 14:38:58.877 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 14:42:16.540 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Starting ProdutorE2ETest using Java 21.0.9 with PID 20128 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 14:42:16.543 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 14:42:17.510 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 14:42:17.670 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 127 ms. Found 4 JPA repository interfaces.
+2025-12-21 14:42:18.907 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 14:42:19.080 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 14:42:19.174 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 14:42:19.614 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 14:42:19.647 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 14:42:19.855 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@62ea8931
+2025-12-21 14:42:19.855 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 14:42:21.801 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 14:42:21.870 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:42:23.513 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Started ProdutorE2ETest in 7.903 seconds (process running for 10.053)
+2025-12-21 14:42:23.539 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-20_00-06-41.db
+2025-12-21 14:42:23.540 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_14-42-23.db. Backups mantidos: 10
+2025-12-21 14:42:23.662 [JavaFX-Launcher] WARN  javafx - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @5579bb86'
+2025-12-21 14:42:27.523 [main] INFO  c.a.sistema.service.ProdutorService - Soft delete do Produtor ID: 1 realizado com sucesso.
+2025-12-21 14:42:27.762 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.agricultura.sistema.SistemaApplicationTests]: SistemaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-12-21 14:42:27.824 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.agricultura.sistema.SistemaApplication for test class com.agricultura.sistema.SistemaApplicationTests
+2025-12-21 14:42:27.922 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:42:27.929 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 14:42:27.946 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 14:43:08.584 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Starting ProdutorE2ETest using Java 21.0.9 with PID 12420 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 14:43:08.589 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 14:43:09.738 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 14:43:09.924 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 165 ms. Found 4 JPA repository interfaces.
+2025-12-21 14:43:11.040 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 14:43:11.201 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 14:43:11.288 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 14:43:11.660 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 14:43:11.689 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 14:43:11.889 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@6c07ad6b
+2025-12-21 14:43:11.893 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 14:43:13.956 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 14:43:14.029 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:43:16.032 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Started ProdutorE2ETest in 8.635 seconds (process running for 11.125)
+2025-12-21 14:43:16.060 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-20_00-07-28.db
+2025-12-21 14:43:16.062 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_14-43-16.db. Backups mantidos: 10
+2025-12-21 14:43:16.152 [JavaFX-Launcher] WARN  javafx - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @5579bb86'
+2025-12-21 14:43:21.054 [main] INFO  c.a.sistema.service.ProdutorService - Soft delete do Produtor ID: 1 realizado com sucesso.
+2025-12-21 14:43:21.403 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.agricultura.sistema.SistemaApplicationTests]: SistemaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-12-21 14:43:21.439 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.agricultura.sistema.SistemaApplication for test class com.agricultura.sistema.SistemaApplicationTests
+2025-12-21 14:43:21.497 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:43:21.508 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 14:43:21.522 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 14:48:22.475 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Starting ProdutorE2ETest using Java 21.0.9 with PID 16032 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 14:48:22.478 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 14:48:23.735 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 14:48:23.886 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 136 ms. Found 4 JPA repository interfaces.
+2025-12-21 14:48:25.112 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 14:48:25.250 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 14:48:25.370 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 14:48:25.779 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 14:48:25.812 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 14:48:26.051 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@20bb85b4
+2025-12-21 14:48:26.053 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 14:48:28.336 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 14:48:28.416 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:48:31.255 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Started ProdutorE2ETest in 9.765 seconds (process running for 12.485)
+2025-12-21 14:48:31.280 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-20_00-10-32.db
+2025-12-21 14:48:31.282 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_14-48-31.db. Backups mantidos: 10
+2025-12-21 14:48:31.374 [JavaFX-Launcher] WARN  javafx - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @5579bb86'
+2025-12-21 14:48:36.680 [main] INFO  c.a.sistema.service.ProdutorService - Soft delete do Produtor ID: 1 realizado com sucesso.
+2025-12-21 14:48:36.978 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.agricultura.sistema.SistemaApplicationTests]: SistemaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-12-21 14:48:37.046 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.agricultura.sistema.SistemaApplication for test class com.agricultura.sistema.SistemaApplicationTests
+2025-12-21 14:48:37.162 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:48:37.174 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 14:48:37.189 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 14:50:02.604 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Starting ProdutorE2ETest using Java 21.0.9 with PID 31196 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 14:50:02.605 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 14:50:03.768 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 14:50:04.020 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 230 ms. Found 4 JPA repository interfaces.
+2025-12-21 14:50:05.460 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 14:50:05.598 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 14:50:05.675 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 14:50:06.196 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 14:50:06.236 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 14:50:06.447 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@55d8c2c4
+2025-12-21 14:50:06.447 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 14:50:08.141 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 14:50:08.205 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:50:09.896 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Started ProdutorE2ETest in 8.168 seconds (process running for 11.149)
+2025-12-21 14:50:09.914 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_12-51-04.db
+2025-12-21 14:50:09.915 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_14-50-09.db. Backups mantidos: 10
+2025-12-21 14:50:10.025 [JavaFX-Launcher] WARN  javafx - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @5579bb86'
+2025-12-21 14:50:14.366 [main] INFO  c.a.sistema.service.ProdutorService - Soft delete do Produtor ID: 1 realizado com sucesso.
+2025-12-21 14:50:14.603 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.agricultura.sistema.SistemaApplicationTests]: SistemaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-12-21 14:50:14.633 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.agricultura.sistema.SistemaApplication for test class com.agricultura.sistema.SistemaApplicationTests
+2025-12-21 14:50:14.707 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:50:14.714 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 14:50:14.730 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 14:51:30.391 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Starting ProdutorE2ETest using Java 21.0.9 with PID 11124 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 14:51:30.394 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 14:51:31.572 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 14:51:31.763 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 164 ms. Found 4 JPA repository interfaces.
+2025-12-21 14:51:33.055 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 14:51:33.220 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 14:51:33.303 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 14:51:33.919 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 14:51:33.990 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 14:51:34.290 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@4c635edc
+2025-12-21 14:51:34.293 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 14:51:36.227 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 14:51:36.278 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:51:38.241 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Started ProdutorE2ETest in 8.728 seconds (process running for 11.505)
+2025-12-21 14:51:38.264 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_13-08-24.db
+2025-12-21 14:51:38.264 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_14-51-38.db. Backups mantidos: 10
+2025-12-21 14:51:38.375 [JavaFX-Launcher] WARN  javafx - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @5579bb86'
+2025-12-21 14:51:44.005 [main] INFO  c.a.sistema.service.ProdutorService - Soft delete do Produtor ID: 1 realizado com sucesso.
+2025-12-21 14:51:44.540 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.agricultura.sistema.SistemaApplicationTests]: SistemaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-12-21 14:51:44.599 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.agricultura.sistema.SistemaApplication for test class com.agricultura.sistema.SistemaApplicationTests
+2025-12-21 14:51:44.743 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:51:44.753 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 14:51:44.845 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 14:54:20.697 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Starting ProdutorE2ETest using Java 21.0.9 with PID 19420 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 14:54:20.697 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 14:54:21.738 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 14:54:21.880 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 126 ms. Found 4 JPA repository interfaces.
+2025-12-21 14:54:23.091 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 14:54:23.271 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 14:54:23.370 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 14:54:23.763 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 14:54:23.797 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 14:54:24.083 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@72af90e8
+2025-12-21 14:54:24.089 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 14:54:25.870 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 14:54:25.919 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:54:27.504 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Started ProdutorE2ETest in 7.699 seconds (process running for 10.087)
+2025-12-21 14:54:27.519 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_14-33-45.db
+2025-12-21 14:54:27.522 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_14-54-27.db. Backups mantidos: 10
+2025-12-21 14:54:27.613 [JavaFX-Launcher] WARN  javafx - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @5579bb86'
+2025-12-21 14:54:31.741 [main] INFO  c.a.sistema.service.ProdutorService - Soft delete do Produtor ID: 1 realizado com sucesso.
+2025-12-21 14:54:31.980 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.agricultura.sistema.SistemaApplicationTests]: SistemaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-12-21 14:54:32.018 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.agricultura.sistema.SistemaApplication for test class com.agricultura.sistema.SistemaApplicationTests
+2025-12-21 14:54:32.110 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 14:54:32.132 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 14:54:32.147 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 15:03:45.815 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Starting ProdutorE2ETest using Java 21.0.9 with PID 20668 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 15:03:45.819 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 15:03:47.025 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 15:03:47.194 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 152 ms. Found 4 JPA repository interfaces.
+2025-12-21 15:03:48.464 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 15:03:48.635 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 15:03:48.723 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 15:03:49.197 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 15:03:49.233 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 15:03:49.463 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@45bbc52f
+2025-12-21 15:03:49.467 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 15:03:51.901 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 15:03:51.974 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 15:03:54.294 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Started ProdutorE2ETest in 9.696 seconds (process running for 12.104)
+2025-12-21 15:03:54.318 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_14-34-34.db
+2025-12-21 15:03:54.320 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_15-03-54.db. Backups mantidos: 10
+2025-12-21 15:03:54.467 [JavaFX-Launcher] WARN  javafx - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @5579bb86'
+2025-12-21 15:03:59.897 [main] INFO  c.a.sistema.service.ProdutorService - Soft delete do Produtor ID: 1 realizado com sucesso.
+2025-12-21 15:04:00.246 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.agricultura.sistema.SistemaApplicationTests]: SistemaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-12-21 15:04:00.288 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.agricultura.sistema.SistemaApplication for test class com.agricultura.sistema.SistemaApplicationTests
+2025-12-21 15:04:00.354 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 15:04:00.362 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 15:04:00.373 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 15:20:43.929 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Starting ProdutorE2ETest using Java 21.0.9 with PID 12932 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 15:20:43.930 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 15:20:44.867 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 15:20:45.013 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 120 ms. Found 4 JPA repository interfaces.
+2025-12-21 15:20:46.146 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 15:20:46.322 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 15:20:46.434 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 15:20:46.882 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 15:20:46.910 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 15:20:47.134 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@71166348
+2025-12-21 15:20:47.135 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 15:20:48.982 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 15:20:49.067 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 15:20:50.555 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Started ProdutorE2ETest in 7.375 seconds (process running for 9.538)
+2025-12-21 15:20:50.575 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_14-37-33.db
+2025-12-21 15:20:50.575 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_15-20-50.db. Backups mantidos: 10
+2025-12-21 15:20:50.686 [JavaFX-Launcher] WARN  javafx - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @5579bb86'
+2025-12-21 15:20:55.778 [main] INFO  c.a.sistema.service.ProdutorService - Soft delete do Produtor ID: 1 realizado com sucesso.
+2025-12-21 15:20:56.019 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.agricultura.sistema.SistemaApplicationTests]: SistemaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-12-21 15:20:56.052 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.agricultura.sistema.SistemaApplication for test class com.agricultura.sistema.SistemaApplicationTests
+2025-12-21 15:20:56.133 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 15:20:56.147 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 15:20:56.164 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 15:21:46.013 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Starting ProdutorE2ETest using Java 21.0.9 with PID 10368 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 15:21:46.016 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 15:21:46.963 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 15:21:47.090 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 113 ms. Found 4 JPA repository interfaces.
+2025-12-21 15:21:48.170 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 15:21:48.292 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 15:21:48.379 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 15:21:48.751 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 15:21:48.777 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 15:21:48.947 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@71166348
+2025-12-21 15:21:48.949 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 15:21:50.483 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 15:21:50.538 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 15:21:52.110 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Started ProdutorE2ETest in 7.065 seconds (process running for 9.153)
+2025-12-21 15:21:52.127 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_14-38-10.db
+2025-12-21 15:21:52.129 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_15-21-52.db. Backups mantidos: 10
+2025-12-21 15:21:52.242 [JavaFX-Launcher] WARN  javafx - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @5579bb86'
+2025-12-21 15:21:56.371 [main] INFO  c.a.sistema.service.ProdutorService - Soft delete do Produtor ID: 1 realizado com sucesso.
+2025-12-21 15:21:56.731 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.agricultura.sistema.SistemaApplicationTests]: SistemaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-12-21 15:21:56.779 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.agricultura.sistema.SistemaApplication for test class com.agricultura.sistema.SistemaApplicationTests
+2025-12-21 15:21:56.890 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 15:21:56.897 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 15:21:56.920 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 15:34:34.363 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Starting ProdutorE2ETest using Java 21.0.9 with PID 26072 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 15:34:34.368 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 15:34:35.183 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 15:34:35.336 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 137 ms. Found 4 JPA repository interfaces.
+2025-12-21 15:34:36.269 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 15:34:36.418 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 15:34:36.504 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 15:34:36.914 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 15:34:36.945 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 15:34:37.160 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@71166348
+2025-12-21 15:34:37.161 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 15:34:38.890 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 15:34:38.938 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 15:34:40.313 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Started ProdutorE2ETest in 6.7 seconds (process running for 8.789)
+2025-12-21 15:34:40.333 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_14-38-54.db
+2025-12-21 15:34:40.338 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_15-34-40.db. Backups mantidos: 10
+2025-12-21 15:34:40.425 [JavaFX-Launcher] WARN  javafx - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @5579bb86'
+2025-12-21 15:34:44.348 [main] INFO  c.a.sistema.service.ProdutorService - Soft delete do Produtor ID: 1 realizado com sucesso.
+2025-12-21 15:34:44.773 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.agricultura.sistema.SistemaApplicationTests]: SistemaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-12-21 15:34:44.841 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.agricultura.sistema.SistemaApplication for test class com.agricultura.sistema.SistemaApplicationTests
+2025-12-21 15:34:44.926 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 15:34:44.943 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 15:34:44.956 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 15:38:20.190 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Starting ProdutorE2ETest using Java 21.0.9 with PID 24668 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 15:38:20.190 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 15:38:21.142 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 15:38:21.280 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 114 ms. Found 4 JPA repository interfaces.
+2025-12-21 15:38:22.375 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 15:38:22.551 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 15:38:22.675 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 15:38:23.146 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 15:38:23.197 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 15:38:23.425 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@72af90e8
+2025-12-21 15:38:23.425 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 15:38:25.002 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 15:38:25.070 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 15:38:26.547 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Started ProdutorE2ETest in 7.314 seconds (process running for 9.543)
+2025-12-21 15:38:26.569 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_14-42-23.db
+2025-12-21 15:38:26.570 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_15-38-26.db. Backups mantidos: 10
+2025-12-21 15:38:26.656 [JavaFX-Launcher] WARN  javafx - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @5579bb86'
+2025-12-21 15:38:30.546 [main] INFO  c.a.sistema.service.ProdutorService - Soft delete do Produtor ID: 1 realizado com sucesso.
+2025-12-21 15:38:30.760 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.agricultura.sistema.SistemaApplicationTests]: SistemaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-12-21 15:38:30.795 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.agricultura.sistema.SistemaApplication for test class com.agricultura.sistema.SistemaApplicationTests
+2025-12-21 15:38:30.912 [main] INFO  c.a.sistema.SistemaApplicationTests - Starting SistemaApplicationTests using Java 21.0.9 with PID 24668 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 15:38:30.912 [main] INFO  c.a.sistema.SistemaApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 15:38:31.317 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 15:38:31.358 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39 ms. Found 4 JPA repository interfaces.
+2025-12-21 15:38:31.620 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 15:38:31.633 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 15:38:31.640 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 15:38:31.651 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-12-21 15:38:31.653 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.sqlite.jdbc4.JDBC4Connection@64e680c5
+2025-12-21 15:38:31.654 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-12-21 15:38:31.877 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 15:38:31.889 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 15:38:32.318 [main] INFO  c.a.sistema.SistemaApplicationTests - Started SistemaApplicationTests in 1.508 seconds (process running for 15.312)
+2025-12-21 15:38:32.325 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_14-43-16.db
+2025-12-21 15:38:32.326 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_15-38-32.db. Backups mantidos: 10
+2025-12-21 15:38:32.396 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 15:38:32.410 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 15:38:32.426 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 15:38:32.430 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 15:38:32.432 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2025-12-21 15:38:32.433 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2025-12-21 15:41:08.342 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Starting ProdutorE2ETest using Java 21.0.9 with PID 5864 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 15:41:08.346 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 15:41:09.246 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 15:41:09.380 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 118 ms. Found 4 JPA repository interfaces.
+2025-12-21 15:41:10.507 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 15:41:10.718 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 15:41:10.901 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 15:41:11.397 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 15:41:11.425 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 15:41:11.636 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@72af90e8
+2025-12-21 15:41:11.640 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 15:41:13.496 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 15:41:13.550 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 15:41:15.063 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Started ProdutorE2ETest in 7.672 seconds (process running for 9.687)
+2025-12-21 15:41:15.080 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_14-48-31.db
+2025-12-21 15:41:15.080 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_15-41-15.db. Backups mantidos: 10
+2025-12-21 15:41:15.155 [JavaFX-Launcher] WARN  javafx - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @5579bb86'
+2025-12-21 15:41:19.197 [main] INFO  c.a.sistema.service.ProdutorService - Soft delete do Produtor ID: 1 realizado com sucesso.
+2025-12-21 15:41:19.440 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.agricultura.sistema.SistemaApplicationTests]: SistemaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-12-21 15:41:19.477 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.agricultura.sistema.SistemaApplication for test class com.agricultura.sistema.SistemaApplicationTests
+2025-12-21 15:41:19.571 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 15:41:19.585 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 15:41:19.599 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 15:42:25.247 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Starting ProdutorE2ETest using Java 21.0.9 with PID 10648 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 15:42:25.251 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 15:42:26.182 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 15:42:26.343 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 132 ms. Found 4 JPA repository interfaces.
+2025-12-21 15:42:27.470 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 15:42:27.652 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 15:42:27.739 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 15:42:28.124 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 15:42:28.155 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 15:42:28.346 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@3cc9632d
+2025-12-21 15:42:28.349 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 15:42:29.883 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 15:42:29.932 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 15:42:31.559 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Started ProdutorE2ETest in 7.361 seconds (process running for 9.6)
+2025-12-21 15:42:31.580 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_14-50-09.db
+2025-12-21 15:42:31.582 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_15-42-31.db. Backups mantidos: 10
+2025-12-21 15:42:31.685 [JavaFX-Launcher] WARN  javafx - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @5579bb86'
+2025-12-21 15:42:35.572 [main] INFO  c.a.sistema.service.ProdutorService - Soft delete do Produtor ID: 1 realizado com sucesso.
+2025-12-21 15:42:35.788 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.agricultura.sistema.SistemaApplicationTests]: SistemaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-12-21 15:42:35.819 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.agricultura.sistema.SistemaApplication for test class com.agricultura.sistema.SistemaApplicationTests
+2025-12-21 15:42:35.882 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 15:42:35.891 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 15:42:35.903 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 15:46:37.897 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Starting ProdutorE2ETest using Java 21.0.9 with PID 26096 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 15:46:37.897 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 15:46:38.857 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 15:46:39.061 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 182 ms. Found 4 JPA repository interfaces.
+2025-12-21 15:46:40.233 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 15:46:40.485 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 15:46:40.569 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 15:46:40.983 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 15:46:41.013 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 15:46:41.227 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@50cbcca7
+2025-12-21 15:46:41.229 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 15:46:42.747 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 15:46:42.799 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 15:46:44.369 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Started ProdutorE2ETest in 7.214 seconds (process running for 9.185)
+2025-12-21 15:46:44.384 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_14-51-38.db
+2025-12-21 15:46:44.384 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_15-46-44.db. Backups mantidos: 10
+2025-12-21 15:46:44.469 [JavaFX-Launcher] WARN  javafx - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @6d3af739'
+2025-12-21 15:46:47.730 [main] INFO  c.a.sistema.service.ProdutorService - Soft delete do Produtor ID: 1 realizado com sucesso.
+2025-12-21 15:46:47.973 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.agricultura.sistema.SistemaApplicationTests]: SistemaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-12-21 15:46:48.001 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.agricultura.sistema.SistemaApplication for test class com.agricultura.sistema.SistemaApplicationTests
+2025-12-21 15:46:48.155 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 15:46:48.167 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 15:46:48.175 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 15:48:54.693 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Starting ProdutorE2ETest using Java 21.0.9 with PID 26576 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 15:48:54.694 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 15:48:55.738 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 15:48:55.903 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 137 ms. Found 4 JPA repository interfaces.
+2025-12-21 15:48:57.091 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 15:48:57.263 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 15:48:57.352 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 15:48:57.747 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 15:48:57.774 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 15:48:57.947 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@2315052d
+2025-12-21 15:48:57.948 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 15:48:59.625 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 15:48:59.682 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 15:49:01.180 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Started ProdutorE2ETest in 7.487 seconds (process running for 9.963)
+2025-12-21 15:49:01.196 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_14-54-27.db
+2025-12-21 15:49:01.198 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_15-49-01.db. Backups mantidos: 10
+2025-12-21 15:49:01.260 [JavaFX-Launcher] WARN  javafx - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @6d3af739'
+2025-12-21 15:49:04.941 [main] INFO  c.a.sistema.service.ProdutorService - Soft delete do Produtor ID: 1 realizado com sucesso.
+2025-12-21 15:49:05.190 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.agricultura.sistema.SistemaApplicationTests]: SistemaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-12-21 15:49:05.247 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.agricultura.sistema.SistemaApplication for test class com.agricultura.sistema.SistemaApplicationTests
+2025-12-21 15:49:05.376 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 15:49:05.382 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 15:49:05.392 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 15:56:09.541 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Starting ProdutorE2ETest using Java 21.0.9 with PID 18708 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 15:56:09.541 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 15:56:10.651 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 15:56:10.755 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 89 ms. Found 4 JPA repository interfaces.
+2025-12-21 15:56:11.782 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 15:56:11.897 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 15:56:11.970 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 15:56:12.330 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 15:56:12.363 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 15:56:12.555 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@38811103
+2025-12-21 15:56:12.565 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 15:56:14.374 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 15:56:14.422 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 15:56:15.972 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Started ProdutorE2ETest in 7.329 seconds (process running for 9.485)
+2025-12-21 15:56:15.991 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_15-03-54.db
+2025-12-21 15:56:15.992 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_15-56-15.db. Backups mantidos: 10
+2025-12-21 15:56:16.056 [JavaFX-Launcher] WARN  javafx - Unsupported JavaFX configuration: classes were loaded from 'unnamed module @68ceda24'
+2025-12-21 15:56:19.339 [main] INFO  c.a.sistema.service.ProdutorService - Soft delete do Produtor ID: 1 realizado com sucesso.
+2025-12-21 15:56:19.570 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.agricultura.sistema.SistemaApplicationTests]: SistemaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-12-21 15:56:19.611 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.agricultura.sistema.SistemaApplication for test class com.agricultura.sistema.SistemaApplicationTests
+2025-12-21 15:56:19.731 [main] INFO  c.a.sistema.SistemaApplicationTests - Starting SistemaApplicationTests using Java 21.0.9 with PID 18708 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 15:56:19.732 [main] INFO  c.a.sistema.SistemaApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 15:56:20.232 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 15:56:20.280 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 46 ms. Found 4 JPA repository interfaces.
+2025-12-21 15:56:20.882 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 15:56:20.898 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 15:56:20.911 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 15:56:20.926 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-12-21 15:56:20.929 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.sqlite.jdbc4.JDBC4Connection@1d2aa638
+2025-12-21 15:56:20.932 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-12-21 15:56:21.162 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 15:56:21.172 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 15:56:21.705 [main] INFO  c.a.sistema.SistemaApplicationTests - Started SistemaApplicationTests in 2.076 seconds (process running for 15.217)
+2025-12-21 15:56:21.713 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_15-20-50.db
+2025-12-21 15:56:21.714 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_15-56-21.db. Backups mantidos: 10
+2025-12-21 15:56:21.780 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 15:56:21.789 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 15:56:21.800 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 15:56:21.806 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 15:56:21.807 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2025-12-21 15:56:21.810 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2025-12-21 16:00:48.113 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Starting ProdutorE2ETest using Java 21.0.9 with PID 476 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 16:00:48.115 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 16:00:49.257 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 16:00:49.370 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 99 ms. Found 4 JPA repository interfaces.
+2025-12-21 16:00:50.580 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 16:00:50.785 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 16:00:50.859 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 16:00:51.247 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 16:00:51.310 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 16:00:51.615 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@7faa0680
+2025-12-21 16:00:51.618 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 16:00:54.560 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 16:00:54.607 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 16:00:56.267 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Started ProdutorE2ETest in 8.839 seconds (process running for 12.526)
+2025-12-21 16:00:56.285 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_15-21-52.db
+2025-12-21 16:00:56.286 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_16-00-56.db. Backups mantidos: 10
+2025-12-21 16:00:59.298 [main] INFO  c.a.sistema.service.ProdutorService - Soft delete do Produtor ID: 1 realizado com sucesso.
+2025-12-21 16:00:59.539 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.agricultura.sistema.SistemaApplicationTests]: SistemaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-12-21 16:00:59.569 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.agricultura.sistema.SistemaApplication for test class com.agricultura.sistema.SistemaApplicationTests
+2025-12-21 16:00:59.697 [main] INFO  c.a.sistema.SistemaApplicationTests - Starting SistemaApplicationTests using Java 21.0.9 with PID 476 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 16:00:59.698 [main] INFO  c.a.sistema.SistemaApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 16:01:00.145 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 16:01:00.179 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 4 JPA repository interfaces.
+2025-12-21 16:01:00.434 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 16:01:00.445 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 16:01:00.457 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 16:01:00.466 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-12-21 16:01:00.469 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.sqlite.jdbc4.JDBC4Connection@3344c1d7
+2025-12-21 16:01:00.470 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-12-21 16:01:00.707 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 16:01:00.722 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 16:01:01.285 [main] INFO  c.a.sistema.SistemaApplicationTests - Started SistemaApplicationTests in 1.701 seconds (process running for 17.544)
+2025-12-21 16:01:01.292 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_15-34-40.db
+2025-12-21 16:01:01.293 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_16-01-01.db. Backups mantidos: 10
+2025-12-21 16:01:01.360 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 16:01:01.367 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 16:01:01.380 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 16:01:01.391 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 16:01:01.391 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2025-12-21 16:01:01.396 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2025-12-21 16:01:33.551 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Starting ProdutorE2ETest using Java 21.0.9 with PID 27360 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 16:01:33.552 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 16:01:34.724 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 16:01:34.810 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 74 ms. Found 4 JPA repository interfaces.
+2025-12-21 16:01:35.932 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 16:01:36.145 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 16:01:36.194 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 16:01:36.526 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 16:01:36.577 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 16:01:36.880 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@615439f7
+2025-12-21 16:01:36.888 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 16:01:38.691 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 16:01:38.739 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 16:01:40.317 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Started ProdutorE2ETest in 7.444 seconds (process running for 10.938)
+2025-12-21 16:01:40.342 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_15-38-26.db
+2025-12-21 16:01:40.343 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_16-01-40.db. Backups mantidos: 10
+2025-12-21 16:01:43.238 [main] INFO  c.a.sistema.service.ProdutorService - Soft delete do Produtor ID: 1 realizado com sucesso.
+2025-12-21 16:01:43.456 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.agricultura.sistema.SistemaApplicationTests]: SistemaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-12-21 16:01:43.487 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.agricultura.sistema.SistemaApplication for test class com.agricultura.sistema.SistemaApplicationTests
+2025-12-21 16:01:43.596 [main] INFO  c.a.sistema.SistemaApplicationTests - Starting SistemaApplicationTests using Java 21.0.9 with PID 27360 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 16:01:43.597 [main] INFO  c.a.sistema.SistemaApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 16:01:43.999 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 16:01:44.040 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 40 ms. Found 4 JPA repository interfaces.
+2025-12-21 16:01:44.280 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 16:01:44.293 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 16:01:44.303 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 16:01:44.310 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-12-21 16:01:44.313 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.sqlite.jdbc4.JDBC4Connection@66d766b9
+2025-12-21 16:01:44.314 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-12-21 16:01:44.492 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 16:01:44.505 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 16:01:44.947 [main] INFO  c.a.sistema.SistemaApplicationTests - Started SistemaApplicationTests in 1.441 seconds (process running for 15.568)
+2025-12-21 16:01:44.955 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_15-38-32.db
+2025-12-21 16:01:44.956 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_16-01-44.db. Backups mantidos: 10
+2025-12-21 16:01:45.010 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 16:01:45.018 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 16:01:45.030 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 16:01:45.035 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 16:01:45.037 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2025-12-21 16:01:45.045 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.

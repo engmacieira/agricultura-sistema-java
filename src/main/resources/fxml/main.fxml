@@ -16,35 +16,35 @@
    
    <left>
       <VBox prefWidth="240.0" spacing="8.0" styleClass="sidebar" BorderPane.alignment="CENTER">
-         <children>
-            <Label text="Gestor Sol" styleClass="sidebar-title" maxWidth="Infinity"/>
-            
-            <Region prefHeight="20.0" />
+    <children>
+    <Label text="Gestor Sol" styleClass="sidebar-title" maxWidth="Infinity"/>
+    
+    <Region prefHeight="20.0" />
 
-            <Button text="Produtores" onAction="#onProdutoresClick" 
-                    maxWidth="Infinity" styleClass="nav-button"/>
-            
-            <Button text="Serviços" onAction="#onServicosClick" 
-                    maxWidth="Infinity" styleClass="nav-button"/>
-            
-            <Button text="Execuções" onAction="#onExecucoesClick" 
-                    maxWidth="Infinity" styleClass="nav-button"/>
-            
-            <Button text="Pagamentos" onAction="#onPagamentosClick" 
-                    maxWidth="Infinity" styleClass="nav-button"/>
-            
-            <Button text="Relatórios" onAction="#onRelatoriosClick" 
-                    maxWidth="Infinity" styleClass="nav-button"/>
-            
-            <Button text="Administração" onAction="#onAdminClick" 
-                    maxWidth="Infinity" styleClass="nav-button"/>
+    <Button fx:id="btnProdutores" text="Produtores" onAction="#onProdutoresClick" 
+            maxWidth="Infinity" styleClass="nav-button"/>
+    
+    <Button fx:id="btnServicos" text="Serviços" onAction="#onServicosClick" 
+            maxWidth="Infinity" styleClass="nav-button"/>
+    
+    <Button fx:id="btnExecucoes" text="Execuções" onAction="#onExecucoesClick" 
+            maxWidth="Infinity" styleClass="nav-button"/>
+    
+    <Button fx:id="btnPagamentos" text="Pagamentos" onAction="#onPagamentosClick" 
+            maxWidth="Infinity" styleClass="nav-button"/>
+    
+    <Button fx:id="btnRelatorios" text="Relatórios" onAction="#onRelatoriosClick" 
+            maxWidth="Infinity" styleClass="nav-button"/>
+    
+    <Button fx:id="btnAdmin" text="Administração" onAction="#onAdminClick" 
+            maxWidth="Infinity" styleClass="nav-button"/>
 
-            <Region VBox.vgrow="ALWAYS" />
-            
-            <Button text="Sair do Sistema" onAction="#onSairClick" 
-                    maxWidth="Infinity" styleClass="nav-button, btn-sair"/>
-         </children>
-      </VBox>
+    <Region VBox.vgrow="ALWAYS" />
+    
+    <Button fx:id="btnSair" text="Sair do Sistema" onAction="#onSairClick" 
+            maxWidth="Infinity" styleClass="nav-button, btn-sair"/>
+    </children>
+</VBox>
    </left>
 
    <center>
