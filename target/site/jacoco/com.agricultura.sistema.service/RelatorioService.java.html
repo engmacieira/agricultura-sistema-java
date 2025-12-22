@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RelatorioService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">sistema-agricultura</a> &gt; <a href="index.source.html" class="el_package">com.agricultura.sistema.service</a> &gt; <span class="el_source">RelatorioService.java</span></div><h1>RelatorioService.java</h1><pre class="source lang-java linenums">package com.agricultura.sistema.service;
+
+import com.agricultura.sistema.dto.ResumoFinanceiroDTO;
+import com.agricultura.sistema.model.Execucao;
+import com.agricultura.sistema.model.Pagamento;
+import com.agricultura.sistema.model.Produtor;
+import com.agricultura.sistema.repository.ProdutorRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
+
+@Service
+<span class="fc" id="L16">public class RelatorioService {</span>
+
+    @Autowired
+    private ProdutorRepository produtorRepository;
+
+    public List&lt;ResumoFinanceiroDTO&gt; gerarRelatorioDevedores() {
+<span class="fc" id="L22">        List&lt;ResumoFinanceiroDTO&gt; relatorio = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L23">        List&lt;Produtor&gt; produtores = produtorRepository.findAll();</span>
+
+<span class="fc bfc" id="L25" title="All 2 branches covered.">        for (Produtor produtor : produtores) {</span>
+<span class="fc" id="L26">            BigDecimal totalExecucoes = BigDecimal.ZERO;</span>
+<span class="fc" id="L27">            BigDecimal totalPagos = BigDecimal.ZERO;</span>
+
+<span class="pc bpc" id="L29" title="1 of 2 branches missed.">            if (produtor.getExecucoes() != null) {</span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">                for (Execucao execucao : produtor.getExecucoes()) {</span>
+<span class="pc bpc" id="L31" title="1 of 2 branches missed.">                    if (execucao.getValorTotal() != null) {</span>
+<span class="fc" id="L32">                        totalExecucoes = totalExecucoes.add(execucao.getValorTotal());</span>
+                    }
+
+<span class="pc bpc" id="L35" title="1 of 2 branches missed.">                    if (execucao.getPagamentos() != null) {</span>
+<span class="fc bfc" id="L36" title="All 2 branches covered.">                        for (Pagamento pagamento : execucao.getPagamentos()) {</span>
+<span class="pc bpc" id="L37" title="1 of 2 branches missed.">                            if (pagamento.getValorPago() != null) {</span>
+<span class="fc" id="L38">                                totalPagos = totalPagos.add(pagamento.getValorPago());</span>
+                            }
+<span class="fc" id="L40">                        }</span>
+                    }
+<span class="fc" id="L42">                }</span>
+            }
+
+<span class="fc" id="L45">            BigDecimal totalDivida = totalExecucoes.subtract(totalPagos);</span>
+
+            // Apenas adiciona se tiver dívida positiva
+<span class="fc bfc" id="L48" title="All 2 branches covered.">            if (totalDivida.compareTo(BigDecimal.ZERO) &gt; 0) {</span>
+<span class="fc" id="L49">                relatorio.add(new ResumoFinanceiroDTO(produtor.getNome(), totalDivida, totalPagos));</span>
+            }
+<span class="fc" id="L51">        }</span>
+
+<span class="fc" id="L53">        return relatorio;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

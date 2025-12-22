@@ -127,17 +127,45 @@
 					<trimStackTrace>false</trimStackTrace>
 					
 					<argLine>
+						@{argLine} 
 						-Djava.awt.headless=false
 						-Dtestfx.robot=glass
 						-Dtestfx.headless=false
-						
 						-Dprism.order=sw
-						
 						--add-opens java.base/java.lang=ALL-UNNAMED
 						--add-opens java.base/java.lang.reflect=ALL-UNNAMED
-            			--add-opens java.base/java.util=ALL-UNNAMED
+						--add-opens java.base/java.util=ALL-UNNAMED
 					</argLine>
 				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.11</version>
+				<configuration>
+					<excludes>
+						<exclude>com/agricultura/sistema/SistemaApplication.class</exclude>
+						<exclude>com/agricultura/sistema/AppLauncher.class</exclude>
+						<exclude>com/agricultura/sistema/model/**</exclude>
+						<exclude>com/agricultura/sistema/dto/**</exclude>
+						<exclude>com/agricultura/sistema/exception/**</exclude>
+					</excludes>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>report</id>
+						<phase>test</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>

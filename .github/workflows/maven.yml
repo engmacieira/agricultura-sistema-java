@@ -1,0 +1,39 @@
+name: Java CI with Maven
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Baixa o código do repositório
+    - uses: actions/checkout@v4
+
+    # 2. Configura o Java 21 (Temurin é a distribuição padrão sólida)
+    - name: Set up JDK 21
+      uses: actions/setup-java@v4
+      with:
+        java-version: '21'
+        distribution: 'temurin'
+        cache: 'maven'
+
+    # 3. Roda os Testes
+    # O comando 'clean test' limpa builds antigos e roda a bateria
+    # As flags headless já estão no pom.xml, mas aqui garantimos o ambiente
+    - name: Test with Maven
+      run: mvn clean test
+
+    # 4. (Opcional) Publica o Relatório de Cobertura (JaCoCo)
+    # Isso permite que você baixe um ZIP no GitHub para ver o site do JaCoCo
+    - name: Upload Coverage Report
+      uses: actions/upload-artifact@v4
+      if: always() # Roda mesmo se os testes falharem
+      with:
+        name: jacoco-report
+        path: target/site/jacoco/
+        retention-days: 5

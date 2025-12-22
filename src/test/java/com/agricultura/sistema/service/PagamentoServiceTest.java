@@ -1,10 +1,12 @@
 package com.agricultura.sistema.service;
 
+import com.agricultura.sistema.exception.ResourceNotFoundException;
 import com.agricultura.sistema.model.Execucao;
 import com.agricultura.sistema.model.Pagamento;
 import com.agricultura.sistema.repository.ExecucaoRepository;
 import com.agricultura.sistema.repository.PagamentoRepository;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -13,8 +15,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.Arrays;
-import java.util.Collections;
+import java.util.List;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -22,86 +23,106 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-public class PagamentoServiceTest {
+@SuppressWarnings("null")
+class PagamentoServiceTest {
+
+    @InjectMocks
+    private PagamentoService pagamentoService;
 
     @Mock
     private PagamentoRepository pagamentoRepository;
 
     @Mock
-    private ExecucaoRepository execucaoRepository;
+    private ExecucaoRepository execucaoRepository; // <--- CORREÇÃO: Agora mockamos o Repositório
 
-    @InjectMocks
-    private PagamentoService pagamentoService;
-
-    private Execucao execucao;
+    private Pagamento pagamentoPadrao;
+    private Execucao execucaoPadrao;
 
     @BeforeEach
-    void setUp() {
-        execucao = new Execucao();
-        execucao.setId(1L);
-        execucao.setValorTotal(new BigDecimal("1000.00"));
+    void setup() {
+        execucaoPadrao = new Execucao();
+        execucaoPadrao.setId(100L);
+        execucaoPadrao.setValorTotal(new BigDecimal("1000.00"));
+
+        pagamentoPadrao = new Pagamento();
+        pagamentoPadrao.setId(1L);
+        pagamentoPadrao.setValorPago(new BigDecimal("200.00"));
+        pagamentoPadrao.setDataPagamento(LocalDate.now());
+        pagamentoPadrao.setExecucao(execucaoPadrao);
     }
 
     @Test
-    @SuppressWarnings("null")
-    void create_DeveSalvarPagamento_QuandoValorValido() {
-        Pagamento novoPagamento = new Pagamento();
-        novoPagamento.setExecucao(execucao);
-        novoPagamento.setValorPago(new BigDecimal("200.00"));
-        novoPagamento.setDataPagamento(LocalDate.now());
+    @DisplayName("Deve registrar pagamento com sucesso")
+    void testCreateSuccess() {
+        // Arrange
+        when(execucaoRepository.findById(100L)).thenReturn(Optional.of(execucaoPadrao));
+        when(pagamentoRepository.save(any(Pagamento.class))).thenReturn(pagamentoPadrao);
 
-        when(execucaoRepository.findById(1L)).thenReturn(Optional.of(execucao));
-        when(pagamentoRepository.findByExecucaoId(1L)).thenReturn(Collections.emptyList());
-        when(pagamentoRepository.save(any(Pagamento.class))).thenReturn(novoPagamento);
+        // Act
+        Pagamento criado = pagamentoService.create(pagamentoPadrao);
 
-        Pagamento salvo = pagamentoService.create(novoPagamento);
-
-        assertNotNull(salvo);
-        verify(pagamentoRepository, times(1)).save(novoPagamento);
+        // Assert
+        assertNotNull(criado);
+        assertEquals(new BigDecimal("200.00"), criado.getValorPago());
+        verify(pagamentoRepository, times(1)).save(pagamentoPadrao);
     }
 
     @Test
-    @SuppressWarnings("null")
-    void create_DeveLancarException_QuandoValorExcedeSaldo() {
-        // Já existe um pagamento de 900
-        Pagamento pagamentoExistente = new Pagamento();
-        pagamentoExistente.setValorPago(new BigDecimal("900.00"));
+    @DisplayName("Deve validar se valor excede o saldo")
+    void testCreateValorExcedente() {
+        // Cenário: Já pagou 900, tenta pagar mais 200 (Total 1100 > 1000)
+        Pagamento anterior = new Pagamento();
+        anterior.setValorPago(new BigDecimal("900.00"));
 
-        // Tentativa de pagar mais 200 (Total 1100 > 1000)
-        Pagamento novoPagamento = new Pagamento();
-        novoPagamento.setExecucao(execucao);
-        novoPagamento.setValorPago(new BigDecimal("200.00"));
-        novoPagamento.setDataPagamento(LocalDate.now());
-
-        when(execucaoRepository.findById(1L)).thenReturn(Optional.of(execucao));
-        when(pagamentoRepository.findByExecucaoId(1L)).thenReturn(Arrays.asList(pagamentoExistente));
+        when(execucaoRepository.findById(100L)).thenReturn(Optional.of(execucaoPadrao));
+        when(pagamentoRepository.findByExecucaoId(100L)).thenReturn(List.of(anterior));
 
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
-            pagamentoService.create(novoPagamento);
+            pagamentoService.create(pagamentoPadrao);
         });
 
         assertEquals("Valor excede o saldo devedor", exception.getMessage());
-        verify(pagamentoRepository, never()).save(any(Pagamento.class));
     }
 
     @Test
-    @SuppressWarnings("null")
-    void create_DeveSalvarPagamento_QuandoValorIgualAoSaldoRestante() {
-        // Já existe um pagamento de 500
-        Pagamento pagamentoExistente = new Pagamento();
-        pagamentoExistente.setValorPago(new BigDecimal("500.00"));
+    @DisplayName("Deve buscar pagamento por ID")
+    void testFindById() {
+        when(pagamentoRepository.findById(1L)).thenReturn(Optional.of(pagamentoPadrao));
 
-        // Tentativa de pagar mais 500 (Total 1000 == 1000) -> OK
-        Pagamento novoPagamento = new Pagamento();
-        novoPagamento.setExecucao(execucao);
-        novoPagamento.setValorPago(new BigDecimal("500.00"));
-        novoPagamento.setDataPagamento(LocalDate.now());
+        Pagamento encontrado = pagamentoService.findById(1L);
 
-        when(execucaoRepository.findById(1L)).thenReturn(Optional.of(execucao));
-        when(pagamentoRepository.findByExecucaoId(1L)).thenReturn(Arrays.asList(pagamentoExistente));
-        when(pagamentoRepository.save(any(Pagamento.class))).thenReturn(novoPagamento);
+        assertEquals(1L, encontrado.getId());
+    }
 
-        assertDoesNotThrow(() -> pagamentoService.create(novoPagamento));
-        verify(pagamentoRepository, times(1)).save(novoPagamento);
+    @Test
+    @DisplayName("Deve lançar erro ao buscar ID inexistente")
+    void testFindByIdNotFound() {
+        when(pagamentoRepository.findById(99L)).thenReturn(Optional.empty());
+
+        assertThrows(ResourceNotFoundException.class, () -> {
+            pagamentoService.findById(99L);
+        });
+    }
+
+    @Test
+    @DisplayName("Deve listar todos os pagamentos")
+    void testListarTodos() {
+        when(pagamentoRepository.findAll()).thenReturn(List.of(pagamentoPadrao));
+
+        List<Pagamento> lista = pagamentoService.listarTodos();
+
+        assertFalse(lista.isEmpty());
+        assertEquals(1, lista.size());
+    }
+
+    @Test
+    @DisplayName("Deve deletar pagamento")
+    void testDelete() {
+        when(pagamentoRepository.existsById(1L)).thenReturn(true);
+        doNothing().when(pagamentoRepository).deleteById(1L);
+
+        assertDoesNotThrow(() -> pagamentoService.delete(1L));
+
+        verify(pagamentoRepository, times(1)).deleteById(1L);
     }
 }

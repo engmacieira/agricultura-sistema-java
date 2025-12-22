@@ -1,0 +1,7 @@
+com\agricultura\sistema\IntegrationTestBase.class
+com\agricultura\sistema\service\ProdutorServiceTest.class
+com\agricultura\sistema\service\RelatorioServiceTest.class
+com\agricultura\sistema\service\PagamentoServiceTest.class
+com\agricultura\sistema\service\ServicoServiceTest.class
+com\agricultura\sistema\service\ExecucaoServiceTest.class
+com\agricultura\sistema\SistemaApplicationTests.class

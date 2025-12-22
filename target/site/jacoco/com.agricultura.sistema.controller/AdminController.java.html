@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AdminController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">sistema-agricultura</a> &gt; <a href="index.source.html" class="el_package">com.agricultura.sistema.controller</a> &gt; <span class="el_source">AdminController.java</span></div><h1>AdminController.java</h1><pre class="source lang-java linenums">package com.agricultura.sistema.controller;
+
+import com.agricultura.sistema.service.BackupService;
+import javafx.application.Platform;
+import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
+import javafx.stage.FileChooser;
+import org.springframework.stereotype.Component;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
+
+@Component
+public class AdminController {
+
+    private final BackupService backupService;
+
+<span class="fc" id="L21">    public AdminController(BackupService backupService) {</span>
+<span class="fc" id="L22">        this.backupService = backupService;</span>
+<span class="fc" id="L23">    }</span>
+
+    @FXML
+    public void initialize() {
+        // Inicialização se necessário
+<span class="nc" id="L28">    }</span>
+
+    @FXML
+    public void onFazerBackup() {
+        try {
+            // Chama o serviço para criar um backup manual agora
+            // O serviço já deve ter a lógica de salvar com timestamp na pasta backups/
+<span class="nc" id="L35">            backupService.realizarBackupAoIniciar();</span>
+
+<span class="nc" id="L37">            Alert alert = new Alert(Alert.AlertType.INFORMATION);</span>
+<span class="nc" id="L38">            alert.setTitle(&quot;Backup&quot;);</span>
+<span class="nc" id="L39">            alert.setHeaderText(&quot;Sucesso&quot;);</span>
+<span class="nc" id="L40">            alert.setContentText(&quot;Backup realizado com sucesso na pasta 'backups/'!&quot;);</span>
+<span class="nc" id="L41">            alert.showAndWait();</span>
+<span class="nc" id="L42">        } catch (Exception e) {</span>
+<span class="nc" id="L43">            mostrarErro(&quot;Falha ao realizar backup&quot;, e.getMessage());</span>
+<span class="nc" id="L44">        }</span>
+<span class="nc" id="L45">    }</span>
+
+    @FXML
+    public void onRestaurarBackup() {
+<span class="nc" id="L49">        FileChooser fileChooser = new FileChooser();</span>
+<span class="nc" id="L50">        fileChooser.setTitle(&quot;Selecionar Backup para Restaurar&quot;);</span>
+
+        // Tenta abrir direto na pasta de backups do sistema
+<span class="nc" id="L53">        File backupDir = new File(&quot;backups&quot;);</span>
+<span class="nc bnc" id="L54" title="All 4 branches missed.">        if (backupDir.exists() &amp;&amp; backupDir.isDirectory()) {</span>
+<span class="nc" id="L55">            fileChooser.setInitialDirectory(backupDir);</span>
+        }
+
+<span class="nc" id="L58">        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter(&quot;Arquivos de Banco de Dados&quot;, &quot;*.db&quot;));</span>
+
+<span class="nc" id="L60">        File selectedFile = fileChooser.showOpenDialog(null);</span>
+
+<span class="nc bnc" id="L62" title="All 2 branches missed.">        if (selectedFile != null) {</span>
+<span class="nc" id="L63">            Alert confirmAlert = new Alert(Alert.AlertType.CONFIRMATION);</span>
+<span class="nc" id="L64">            confirmAlert.setTitle(&quot;Confirmar Restauração&quot;);</span>
+<span class="nc" id="L65">            confirmAlert.setHeaderText(&quot;Restaurar backup: &quot; + selectedFile.getName());</span>
+<span class="nc" id="L66">            confirmAlert.setContentText(</span>
+                    &quot;ATENÇÃO: Isso substituirá todos os dados atuais pelos do backup selecionado.\n\n&quot; +
+                            &quot;O sistema precisará ser FECHADO para aplicar a mudança. Deseja continuar?&quot;);
+
+<span class="nc bnc" id="L70" title="All 2 branches missed.">            if (confirmAlert.showAndWait().orElse(ButtonType.CANCEL) == ButtonType.OK) {</span>
+<span class="nc" id="L71">                agendarRestauracao(selectedFile);</span>
+            }
+        }
+<span class="nc" id="L74">    }</span>
+
+    private void agendarRestauracao(File backupSelecionado) {
+        try {
+            // 1. Cria o arquivo de &quot;gatilho&quot; que o AppLauncher vai procurar ao iniciar
+<span class="nc" id="L79">            File gatilhoRestore = new File(&quot;restaurar.db&quot;);</span>
+
+            // 2. Copia o backup escolhido para esse arquivo temporário
+<span class="nc" id="L82">            Files.copy(</span>
+<span class="nc" id="L83">                    backupSelecionado.toPath(),</span>
+<span class="nc" id="L84">                    gatilhoRestore.toPath(),</span>
+                    StandardCopyOption.REPLACE_EXISTING);
+
+            // 3. Avisa o usuário e mata o processo
+<span class="nc" id="L88">            Alert successAlert = new Alert(Alert.AlertType.INFORMATION);</span>
+<span class="nc" id="L89">            successAlert.setTitle(&quot;Restauração Agendada&quot;);</span>
+<span class="nc" id="L90">            successAlert.setHeaderText(&quot;Reinicialização Necessária&quot;);</span>
+<span class="nc" id="L91">            successAlert.setContentText(</span>
+                    &quot;O arquivo de restauração foi preparado com sucesso!\n\n&quot; +
+                            &quot;O sistema será fechado agora automaicamente.\n&quot; +
+                            &quot;POR FAVOR, ABRA O SISTEMA NOVAMENTE para concluir a restauração dos dados.&quot;);
+<span class="nc" id="L95">            successAlert.showAndWait();</span>
+
+            // Fecha a aplicação JavaFX e mata a JVM para liberar o arquivo do banco
+<span class="nc" id="L98">            Platform.exit();</span>
+<span class="nc" id="L99">            System.exit(0);</span>
+
+<span class="nc" id="L101">        } catch (IOException e) {</span>
+<span class="nc" id="L102">            mostrarErro(&quot;Erro ao agendar restauração&quot;, e.getMessage());</span>
+<span class="nc" id="L103">            e.printStackTrace();</span>
+<span class="nc" id="L104">        }</span>
+<span class="nc" id="L105">    }</span>
+
+    private void mostrarErro(String titulo, String mensagem) {
+<span class="nc" id="L108">        Alert errorAlert = new Alert(Alert.AlertType.ERROR);</span>
+<span class="nc" id="L109">        errorAlert.setTitle(&quot;Erro&quot;);</span>
+<span class="nc" id="L110">        errorAlert.setHeaderText(titulo);</span>
+<span class="nc" id="L111">        errorAlert.setContentText(mensagem);</span>
+<span class="nc" id="L112">        errorAlert.showAndWait();</span>
+<span class="nc" id="L113">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

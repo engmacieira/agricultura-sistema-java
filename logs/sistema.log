@@ -1216,3 +1216,534 @@
 2025-12-21 16:48:42.021 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-12-21 16:48:42.022 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
 2025-12-21 16:48:42.025 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2025-12-21 16:56:20.729 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Starting ProdutorE2ETest using Java 21.0.9 with PID 16716 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 16:56:20.730 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 16:56:21.801 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 16:56:22.019 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 79 ms. Found 4 JPA repository interfaces.
+2025-12-21 16:56:23.002 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 16:56:23.160 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 16:56:23.224 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 16:56:23.596 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 16:56:23.645 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 16:56:24.000 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@632cf7d3
+2025-12-21 16:56:24.008 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 16:56:26.265 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 16:56:26.306 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 16:56:27.708 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Started ProdutorE2ETest in 7.749 seconds (process running for 10.617)
+2025-12-21 16:56:27.823 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_16-35-02.db
+2025-12-21 16:56:27.824 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_16-56-27.db. Backups mantidos: 10
+2025-12-21 16:56:45.339 [main] INFO  c.a.sistema.service.ProdutorService - Soft delete do Produtor ID: 1 realizado com sucesso.
+2025-12-21 16:56:45.565 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.agricultura.sistema.SistemaApplicationTests]: SistemaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-12-21 16:56:45.599 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.agricultura.sistema.SistemaApplication for test class com.agricultura.sistema.SistemaApplicationTests
+2025-12-21 16:56:45.745 [main] INFO  c.a.sistema.SistemaApplicationTests - Starting SistemaApplicationTests using Java 21.0.9 with PID 16716 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 16:56:45.745 [main] INFO  c.a.sistema.SistemaApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 16:56:46.365 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 16:56:46.403 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 37 ms. Found 4 JPA repository interfaces.
+2025-12-21 16:56:46.664 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 16:56:46.682 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 16:56:46.693 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 16:56:46.701 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-12-21 16:56:46.705 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.sqlite.jdbc4.JDBC4Connection@2eea0775
+2025-12-21 16:56:46.706 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-12-21 16:56:46.916 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 16:56:46.927 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 16:56:47.361 [main] INFO  c.a.sistema.SistemaApplicationTests - Started SistemaApplicationTests in 1.745 seconds (process running for 30.27)
+2025-12-21 16:56:47.369 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_16-35-07.db
+2025-12-21 16:56:47.371 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_16-56-47.db. Backups mantidos: 10
+2025-12-21 16:56:47.426 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 16:56:47.433 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 16:56:47.442 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 16:56:47.447 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 16:56:47.447 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2025-12-21 16:56:47.451 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2025-12-21 17:02:24.326 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Starting ProdutorE2ETest using Java 21.0.9 with PID 30916 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 17:02:24.329 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 17:02:25.440 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 17:02:25.540 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 73 ms. Found 4 JPA repository interfaces.
+2025-12-21 17:02:26.696 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 17:02:26.889 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 17:02:26.946 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 17:02:27.307 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 17:02:27.358 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 17:02:27.664 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@632cf7d3
+2025-12-21 17:02:27.669 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 17:02:29.502 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 17:02:29.541 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 17:02:30.976 [main] INFO  c.a.sistema.gui.ProdutorE2ETest - Started ProdutorE2ETest in 7.482 seconds (process running for 10.1)
+2025-12-21 17:02:30.991 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_16-40-17.db
+2025-12-21 17:02:30.992 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_17-02-30.db. Backups mantidos: 10
+2025-12-21 17:02:45.436 [JavaFX Application Thread] WARN  c.a.sistema.service.ProdutorService - Tentativa de cadastro com CPF duplicado: 123.456.789-00
+2025-12-21 17:02:45.725 [JavaFX Application Thread] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 19, SQLState: null
+2025-12-21 17:02:45.727 [JavaFX Application Thread] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: produtores.cpf)
+2025-12-21 17:02:45.808 [JavaFX Application Thread] ERROR c.a.sistema.service.ProdutorService - Erro ao criar produtor: 
+org.springframework.orm.jpa.JpaSystemException: could not execute statement [[SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: produtores.cpf)] [insert into produtores (apelido,cpf,deletado_em,nome,referencia,regiao,telefone) values (?,?,?,?,?,?,?)]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:341)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:335)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:152)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:164)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:249)
+	at jdk.proxy2/jdk.proxy2.$Proxy115.save(Unknown Source)
+	at com.agricultura.sistema.service.ProdutorService.create(ProdutorService.java:61)
+	at com.agricultura.sistema.controller.ProdutorController.onSalvar(ProdutorController.java:91)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
+	at com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Node.fireEvent(Node.java:8875)
+	at javafx.scene.control.Button.fire(Button.java:203)
+	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.hibernate.exception.GenericJDBCException: could not execute statement [[SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: produtores.cpf)] [insert into produtores (apelido,cpf,deletado_em,nome,referencia,regiao,telefone) values (?,?,?,?,?,?,?)]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:63)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:283)
+	at org.hibernate.id.insert.AbstractSelectingDelegate.performInsert(AbstractSelectingDelegate.java:76)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorPostInsertSingleTable.execute(MutationExecutorPostInsertSingleTable.java:100)
+	at org.hibernate.persister.entity.mutation.InsertCoordinator.doStaticInserts(InsertCoordinator.java:171)
+	at org.hibernate.persister.entity.mutation.InsertCoordinator.coordinateInsert(InsertCoordinator.java:112)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2860)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:81)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:667)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:290)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:271)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:321)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:386)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:300)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:219)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:134)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:175)
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:93)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:54)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:766)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:750)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:311)
+	at jdk.proxy2/jdk.proxy2.$Proxy108.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:618)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:352)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:385)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	... 63 common frames omitted
+Caused by: org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: produtores.cpf)
+	at org.sqlite.core.DB.newSQLException(DB.java:1179)
+	at org.sqlite.core.DB.newSQLException(DB.java:1190)
+	at org.sqlite.core.DB.execute(DB.java:985)
+	at org.sqlite.core.DB.executeUpdate(DB.java:1054)
+	at org.sqlite.jdbc3.JDBC3PreparedStatement.lambda$executeLargeUpdate$2(JDBC3PreparedStatement.java:122)
+	at org.sqlite.jdbc3.JDBC3Statement.withConnectionTimeout(JDBC3Statement.java:459)
+	at org.sqlite.jdbc3.JDBC3PreparedStatement.executeLargeUpdate(JDBC3PreparedStatement.java:121)
+	at org.sqlite.jdbc3.JDBC3PreparedStatement.executeUpdate(JDBC3PreparedStatement.java:102)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:280)
+	... 109 common frames omitted
+2025-12-21 17:02:49.294 [main] INFO  c.a.sistema.service.ProdutorService - Soft delete do Produtor ID: 1 realizado com sucesso.
+2025-12-21 17:02:49.551 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.agricultura.sistema.SistemaApplicationTests]: SistemaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-12-21 17:02:49.595 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.agricultura.sistema.SistemaApplication for test class com.agricultura.sistema.SistemaApplicationTests
+2025-12-21 17:02:49.745 [main] INFO  c.a.sistema.SistemaApplicationTests - Starting SistemaApplicationTests using Java 21.0.9 with PID 30916 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 17:02:49.745 [main] INFO  c.a.sistema.SistemaApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 17:02:50.210 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 17:02:50.249 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39 ms. Found 4 JPA repository interfaces.
+2025-12-21 17:02:50.534 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 17:02:50.550 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 17:02:50.560 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 17:02:50.570 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-12-21 17:02:50.574 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.sqlite.jdbc4.JDBC4Connection@4d25943d
+2025-12-21 17:02:50.576 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-12-21 17:02:50.802 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 17:02:50.817 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 17:02:51.362 [main] INFO  c.a.sistema.SistemaApplicationTests - Started SistemaApplicationTests in 1.746 seconds (process running for 30.485)
+2025-12-21 17:02:51.370 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_16-40-22.db
+2025-12-21 17:02:51.372 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_17-02-51.db. Backups mantidos: 10
+2025-12-21 17:02:51.461 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 17:02:51.480 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 17:02:51.500 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 17:02:51.508 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 17:02:51.508 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2025-12-21 17:02:51.515 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2025-12-21 17:06:42.510 [JavaFX-Launcher] INFO  o.s.boot.SpringApplication - Starting application using Java 21.0.9 with PID 3880 (started by mathe in e:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 17:06:42.516 [JavaFX-Launcher] INFO  o.s.boot.SpringApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 17:06:43.622 [JavaFX-Launcher] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 17:06:43.850 [JavaFX-Launcher] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 184 ms. Found 4 JPA repository interfaces.
+2025-12-21 17:06:44.892 [JavaFX-Launcher] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 17:06:45.034 [JavaFX-Launcher] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 17:06:45.101 [JavaFX-Launcher] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 17:06:45.549 [JavaFX-Launcher] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 17:06:45.585 [JavaFX-Launcher] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 17:06:45.810 [JavaFX-Launcher] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@2882eb88
+2025-12-21 17:06:45.814 [JavaFX-Launcher] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 17:06:47.760 [JavaFX-Launcher] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 17:06:47.816 [JavaFX-Launcher] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 17:06:49.568 [JavaFX-Launcher] INFO  o.s.boot.SpringApplication - Started application in 8.146 seconds (process running for 10.269)
+2025-12-21 17:06:49.590 [JavaFX-Launcher] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_16-44-40.db
+2025-12-21 17:06:49.591 [JavaFX-Launcher] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_17-06-49.db. Backups mantidos: 10
+2025-12-21 17:07:09.670 [JavaFX Application Thread] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1, SQLState: null
+2025-12-21 17:07:09.670 [JavaFX Application Thread] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - [SQLITE_ERROR] SQL error or missing database (no such column: id)
+2025-12-21 17:07:09.692 [JavaFX Application Thread] ERROR c.a.sistema.service.ProdutorService - Erro ao excluir produtor ID 246: 
+org.springframework.orm.jpa.JpaSystemException: could not prepare statement [[SQLITE_ERROR] SQL error or missing database (no such column: id)] [UPDATE produtores SET deletado_em = CURRENT_TIMESTAMP WHERE id = ?]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:341)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:565)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:794)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:757)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:669)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:419)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:164)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:249)
+	at jdk.proxy2/jdk.proxy2.$Proxy106.deleteById(Unknown Source)
+	at com.agricultura.sistema.service.ProdutorService.delete(ProdutorService.java:102)
+	at com.agricultura.sistema.controller.ProdutorController.onExcluir(ProdutorController.java:125)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
+	at com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
+	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Node.fireEvent(Node.java:8875)
+	at javafx.scene.control.Button.fire(Button.java:203)
+	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.hibernate.exception.GenericJDBCException: could not prepare statement [[SQLITE_ERROR] SQL error or missing database (no such column: id)] [UPDATE produtores SET deletado_em = CURRENT_TIMESTAMP WHERE id = ?]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:63)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.internal.MutationStatementPreparerImpl$StatementPreparationTemplate.prepareStatement(MutationStatementPreparerImpl.java:110)
+	at org.hibernate.engine.jdbc.internal.MutationStatementPreparerImpl.prepareStatement(MutationStatementPreparerImpl.java:35)
+	at org.hibernate.engine.jdbc.mutation.internal.ModelMutationHelper.standardStatementPreparation(ModelMutationHelper.java:145)
+	at org.hibernate.engine.jdbc.mutation.internal.ModelMutationHelper.lambda$standardPreparation$0(ModelMutationHelper.java:118)
+	at org.hibernate.engine.jdbc.mutation.internal.PreparedStatementDetailsStandard.resolveStatement(PreparedStatementDetailsStandard.java:87)
+	at org.hibernate.persister.entity.mutation.DeleteCoordinator.applyId(DeleteCoordinator.java:225)
+	at org.hibernate.persister.entity.mutation.DeleteCoordinator.doStaticDelete(DeleteCoordinator.java:265)
+	at org.hibernate.persister.entity.mutation.DeleteCoordinator.coordinateDelete(DeleteCoordinator.java:86)
+	at org.hibernate.persister.entity.AbstractEntityPersister.delete(AbstractEntityPersister.java:2971)
+	at org.hibernate.action.internal.EntityDeleteAction.execute(EntityDeleteAction.java:131)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:631)
+	at org.hibernate.engine.spi.ActionQueue.executeActions(ActionQueue.java:498)
+	at org.hibernate.event.internal.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:363)
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:39)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1415)
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:496)
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:2325)
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:1988)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:439)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:169)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:267)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101)
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:561)
+	... 70 common frames omitted
+Caused by: org.sqlite.SQLiteException: [SQLITE_ERROR] SQL error or missing database (no such column: id)
+	at org.sqlite.core.DB.newSQLException(DB.java:1179)
+	at org.sqlite.core.DB.newSQLException(DB.java:1190)
+	at org.sqlite.core.DB.throwex(DB.java:1150)
+	at org.sqlite.core.NativeDB.prepare_utf8(Native Method)
+	at org.sqlite.core.NativeDB.prepare(NativeDB.java:134)
+	at org.sqlite.core.DB.prepare(DB.java:264)
+	at org.sqlite.core.CorePreparedStatement.<init>(CorePreparedStatement.java:46)
+	at org.sqlite.jdbc3.JDBC3PreparedStatement.<init>(JDBC3PreparedStatement.java:32)
+	at org.sqlite.jdbc4.JDBC4PreparedStatement.<init>(JDBC4PreparedStatement.java:25)
+	at org.sqlite.jdbc4.JDBC4Connection.prepareStatement(JDBC4Connection.java:34)
+	at org.sqlite.jdbc3.JDBC3Connection.prepareStatement(JDBC3Connection.java:225)
+	at org.sqlite.jdbc3.JDBC3Connection.prepareStatement(JDBC3Connection.java:205)
+	at com.zaxxer.hikari.pool.ProxyConnection.prepareStatement(ProxyConnection.java:327)
+	at com.zaxxer.hikari.pool.HikariProxyConnection.prepareStatement(HikariProxyConnection.java)
+	at org.hibernate.engine.jdbc.internal.MutationStatementPreparerImpl$1.doPrepare(MutationStatementPreparerImpl.java:45)
+	at org.hibernate.engine.jdbc.internal.MutationStatementPreparerImpl$StatementPreparationTemplate.prepareStatement(MutationStatementPreparerImpl.java:100)
+	... 93 common frames omitted
+2025-12-21 17:07:15.510 [JavaFX Application Thread] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 17:07:15.516 [JavaFX Application Thread] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 17:07:15.557 [JavaFX Application Thread] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 17:08:46.064 [main] INFO  c.a.sistema.SistemaApplicationTests - Starting SistemaApplicationTests using Java 21.0.9 with PID 1640 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 17:08:46.068 [main] INFO  c.a.sistema.SistemaApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 17:08:47.430 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 17:08:47.621 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 163 ms. Found 4 JPA repository interfaces.
+2025-12-21 17:08:48.955 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 17:08:49.160 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 17:08:49.282 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 17:08:49.712 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 17:08:49.810 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 17:08:50.170 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@14c16388
+2025-12-21 17:08:50.179 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 17:08:53.047 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 17:08:53.195 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 17:08:54.928 [main] INFO  c.a.sistema.SistemaApplicationTests - Started SistemaApplicationTests in 10.13 seconds (process running for 19.935)
+2025-12-21 17:08:54.947 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_16-44-45.db
+2025-12-21 17:08:54.947 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_17-08-54.db. Backups mantidos: 10
+2025-12-21 17:08:55.033 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 17:08:55.040 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 17:08:55.063 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 17:23:48.483 [main] INFO  c.a.sistema.SistemaApplicationTests - Starting SistemaApplicationTests using Java 21.0.9 with PID 5408 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 17:23:48.488 [main] INFO  c.a.sistema.SistemaApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 17:23:49.870 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 17:23:50.056 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 158 ms. Found 4 JPA repository interfaces.
+2025-12-21 17:23:51.355 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 17:23:51.543 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 17:23:51.685 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 17:23:52.060 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 17:23:52.159 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 17:23:52.451 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@27868127
+2025-12-21 17:23:52.455 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 17:23:54.947 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 17:23:55.040 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 17:23:56.732 [main] INFO  c.a.sistema.SistemaApplicationTests - Started SistemaApplicationTests in 9.602 seconds (process running for 18.747)
+2025-12-21 17:23:56.752 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_16-47-11.db
+2025-12-21 17:23:56.752 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_17-23-56.db. Backups mantidos: 10
+2025-12-21 17:23:56.853 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 17:23:56.858 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 17:23:56.865 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 21:46:41.857 [main] INFO  c.a.sistema.SistemaApplicationTests - Starting SistemaApplicationTests using Java 21.0.9 with PID 31248 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 21:46:41.970 [main] INFO  c.a.sistema.SistemaApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 21:46:43.617 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 21:46:43.944 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 274 ms. Found 4 JPA repository interfaces.
+2025-12-21 21:46:45.707 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 21:46:46.012 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 21:46:46.190 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 21:46:46.874 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 21:46:47.047 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 21:46:47.496 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@30f454f4
+2025-12-21 21:46:47.507 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 21:46:51.145 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 21:46:51.288 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 21:46:53.327 [main] INFO  c.a.sistema.SistemaApplicationTests - Started SistemaApplicationTests in 13.623 seconds (process running for 25.104)
+2025-12-21 21:46:53.355 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_16-47-19.db
+2025-12-21 21:46:53.356 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_21-46-53.db. Backups mantidos: 10
+2025-12-21 21:46:53.447 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 21:46:53.454 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 21:46:53.463 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 21:47:55.833 [main] INFO  c.a.sistema.SistemaApplicationTests - Starting SistemaApplicationTests using Java 21.0.9 with PID 7812 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 21:47:55.839 [main] INFO  c.a.sistema.SistemaApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 21:47:57.297 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 21:47:57.567 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 235 ms. Found 4 JPA repository interfaces.
+2025-12-21 21:47:59.210 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 21:47:59.438 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 21:47:59.632 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 21:48:00.125 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 21:48:00.238 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 21:48:00.607 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@7085261e
+2025-12-21 21:48:00.613 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 21:48:03.835 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 21:48:03.933 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 21:48:05.737 [main] INFO  c.a.sistema.SistemaApplicationTests - Started SistemaApplicationTests in 11.652 seconds (process running for 22.341)
+2025-12-21 21:48:05.758 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_16-48-35.db
+2025-12-21 21:48:05.758 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_21-48-05.db. Backups mantidos: 10
+2025-12-21 21:48:05.837 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 21:48:05.841 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 21:48:05.849 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 21:52:42.373 [main] INFO  c.a.sistema.SistemaApplicationTests - Starting SistemaApplicationTests using Java 21.0.9 with PID 22412 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 21:52:42.375 [main] INFO  c.a.sistema.SistemaApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 21:52:43.963 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 21:52:44.255 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 264 ms. Found 4 JPA repository interfaces.
+2025-12-21 21:52:45.945 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 21:52:46.210 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 21:52:46.410 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 21:52:46.983 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 21:52:47.099 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 21:52:47.509 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@17236e87
+2025-12-21 21:52:47.515 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 21:52:50.963 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 21:52:51.179 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 21:52:53.043 [main] INFO  c.a.sistema.SistemaApplicationTests - Started SistemaApplicationTests in 12.435 seconds (process running for 23.544)
+2025-12-21 21:52:53.073 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_16-48-41.db
+2025-12-21 21:52:53.075 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_21-52-53.db. Backups mantidos: 10
+2025-12-21 21:52:53.169 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 21:52:53.176 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 21:52:53.182 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 21:56:22.797 [main] INFO  c.a.sistema.SistemaApplicationTests - Starting SistemaApplicationTests using Java 21.0.9 with PID 24476 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 21:56:22.805 [main] INFO  c.a.sistema.SistemaApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 21:56:24.468 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 21:56:24.640 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 144 ms. Found 4 JPA repository interfaces.
+2025-12-21 21:56:26.350 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 21:56:26.615 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 21:56:26.830 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 21:56:27.300 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 21:56:27.439 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 21:56:27.875 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@524911cd
+2025-12-21 21:56:27.883 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 21:56:31.560 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 21:56:31.707 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 21:56:34.125 [main] INFO  c.a.sistema.SistemaApplicationTests - Started SistemaApplicationTests in 13.072 seconds (process running for 23.757)
+2025-12-21 21:56:34.155 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_16-56-27.db
+2025-12-21 21:56:34.160 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_21-56-34.db. Backups mantidos: 10
+2025-12-21 21:56:34.252 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 21:56:34.255 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 21:56:34.261 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 22:03:20.596 [main] INFO  c.a.sistema.SistemaApplicationTests - Starting SistemaApplicationTests using Java 21.0.9 with PID 5932 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 22:03:20.597 [main] INFO  c.a.sistema.SistemaApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 22:03:21.999 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 22:03:22.232 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 199 ms. Found 4 JPA repository interfaces.
+2025-12-21 22:03:23.875 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 22:03:24.163 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 22:03:24.367 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 22:03:24.880 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 22:03:25.037 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 22:03:25.447 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@4edea6b4
+2025-12-21 22:03:25.460 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 22:03:28.679 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 22:03:28.822 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 22:03:30.983 [main] INFO  c.a.sistema.SistemaApplicationTests - Started SistemaApplicationTests in 12.142 seconds (process running for 22.82)
+2025-12-21 22:03:31.017 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_16-56-47.db
+2025-12-21 22:03:31.018 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_22-03-31.db. Backups mantidos: 10
+2025-12-21 22:03:31.115 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 22:03:31.124 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 22:03:31.132 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 22:04:19.579 [main] INFO  c.a.sistema.SistemaApplicationTests - Starting SistemaApplicationTests using Java 21.0.9 with PID 3000 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 22:04:19.583 [main] INFO  c.a.sistema.SistemaApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 22:04:20.967 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 22:04:21.217 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 207 ms. Found 4 JPA repository interfaces.
+2025-12-21 22:04:22.790 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 22:04:22.983 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 22:04:23.128 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 22:04:23.529 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 22:04:23.613 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 22:04:24.002 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@5c8adab7
+2025-12-21 22:04:24.015 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 22:04:27.501 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 22:04:27.660 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 22:04:29.747 [main] INFO  c.a.sistema.SistemaApplicationTests - Started SistemaApplicationTests in 12.017 seconds (process running for 23.016)
+2025-12-21 22:04:29.779 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_17-02-30.db
+2025-12-21 22:04:29.779 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_22-04-29.db. Backups mantidos: 10
+2025-12-21 22:04:29.867 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 22:04:29.875 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 22:04:29.886 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-12-21 22:07:30.478 [main] INFO  c.a.sistema.SistemaApplicationTests - Starting SistemaApplicationTests using Java 21.0.9 with PID 18388 (started by mathe in E:\Projetos VSCODE\refatoracao-agricultura-java)
+2025-12-21 22:07:30.483 [main] INFO  c.a.sistema.SistemaApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-12-21 22:07:32.060 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-12-21 22:07:32.310 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 206 ms. Found 4 JPA repository interfaces.
+2025-12-21 22:07:33.843 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-12-21 22:07:34.038 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-12-21 22:07:34.224 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-12-21 22:07:34.662 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-12-21 22:07:34.756 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-12-21 22:07:35.222 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@8a37c6a
+2025-12-21 22:07:35.232 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-12-21 22:07:38.398 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-12-21 22:07:38.542 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 22:07:40.747 [main] INFO  c.a.sistema.SistemaApplicationTests - Started SistemaApplicationTests in 12.015 seconds (process running for 22.868)
+2025-12-21 22:07:40.786 [main] INFO  c.a.sistema.service.BackupService - Backup antigo removido pela rotação: backup_2025-12-21_17-02-51.db
+2025-12-21 22:07:40.786 [main] INFO  c.a.sistema.service.BackupService - Backup automático realizado: backup_2025-12-21_22-07-40.db. Backups mantidos: 10
+2025-12-21 22:07:40.880 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-21 22:07:40.885 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-12-21 22:07:40.895 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
