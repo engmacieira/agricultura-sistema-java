@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "produtores")
-@SQLDelete(sql = "UPDATE produtores SET deletado_em = CURRENT_TIMESTAMP WHERE id = ?")
+@SQLDelete(sql = "UPDATE produtores SET deletado_em = CURRENT_TIMESTAMP WHERE produtor_id = ?")
 @SQLRestriction("deletado_em IS NULL")
 @Data
 @Builder

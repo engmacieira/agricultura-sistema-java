@@ -24,6 +24,7 @@ com\agricultura\sistema\controller\PagamentoController.class
 com\agricultura\sistema\model\Pagamento$PagamentoBuilder.class
 com\agricultura\sistema\repository\PagamentoRepository.class
 com\agricultura\sistema\model\Produtor.class
+com\agricultura\sistema\config\DatabaseFixer.class
 com\agricultura\sistema\controller\ProdutorController.class
 com\agricultura\sistema\dto\ResumoFinanceiroDTO.class
 com\agricultura\sistema\AppLauncher.class
