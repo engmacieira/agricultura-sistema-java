@@ -21,7 +21,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-@SuppressWarnings("null")
+// @SuppressWarnings("null") <--- REMOVIDO: Não é necessário neste teste pois
+// não usamos 'any()'
 class RelatorioServiceTest {
 
     @InjectMocks

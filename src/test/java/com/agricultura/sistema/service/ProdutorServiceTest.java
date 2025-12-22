@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
@@ -147,15 +147,17 @@ class ProdutorServiceTest {
         dadosNovos.setCpf("111.111.111-11"); // Novo CPF
 
         when(produtorRepository.findById(1L)).thenReturn(Optional.of(produtorPadrao));
-        when(produtorRepository.save(any(Produtor.class))).thenReturn(produtorPadrao); // O retorno do save geralmente é
-                                                                                       // o obj salvo
+        when(produtorRepository.save(any(Produtor.class))).thenReturn(produtorPadrao);
 
+        // AQUI ESTAVA O "ERRO": Criamos a variável mas não usávamos
         Produtor atualizado = produtorService.update(1L, dadosNovos);
 
-        // Verifica se os campos do objeto recuperado foram alterados antes de salvar
-        assertEquals("João Atualizado", produtorPadrao.getNome());
-        assertEquals("Jota", produtorPadrao.getApelido());
-        assertEquals("111.111.111-11", produtorPadrao.getCpf());
+        // CORREÇÃO: Agora verificamos a variável 'atualizado' em vez do
+        // 'produtorPadrao'
+        assertNotNull(atualizado); // Garante que não voltou nulo
+        assertEquals("João Atualizado", atualizado.getNome());
+        assertEquals("Jota", atualizado.getApelido());
+        assertEquals("111.111.111-11", atualizado.getCpf());
 
         verify(produtorRepository, times(1)).save(produtorPadrao);
     }

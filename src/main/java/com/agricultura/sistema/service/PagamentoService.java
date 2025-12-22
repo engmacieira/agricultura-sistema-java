@@ -3,7 +3,7 @@ package com.agricultura.sistema.service;
 import com.agricultura.sistema.exception.ResourceNotFoundException;
 import com.agricultura.sistema.model.Execucao;
 import com.agricultura.sistema.model.Pagamento;
-import com.agricultura.sistema.repository.ExecucaoRepository; // Se usar ExecucaoService, mude aqui
+import com.agricultura.sistema.repository.ExecucaoRepository;
 import com.agricultura.sistema.repository.PagamentoRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -11,26 +11,22 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.Objects; // <--- Importante para a correção
 
 @Service
 @RequiredArgsConstructor
 public class PagamentoService {
 
     private final PagamentoRepository pagamentoRepository;
-
-    // Nota: Para manter consistência com o teste que mocka o Service,
-    // idealmente injetamos ExecucaoService, mas se usar Repository direto funciona
-    // também,
-    // desde que a lógica esteja aqui. Vou manter como estava no seu código original
-    // (Repository)
-    // para não quebrar a injeção do Spring.
     private final ExecucaoRepository execucaoRepository;
 
     /**
-     * Registra um novo pagamento.
+     * Registra um novo pagamento, validando se não excede o valor total da
+     * execução.
      */
     @Transactional
     public Pagamento create(Pagamento pagamento) {
+        // 1. Validação de Vínculo
         if (pagamento.getExecucao() == null || pagamento.getExecucao().getId() == null) {
             throw new IllegalArgumentException("Pagamento deve estar vinculado a uma Execução válida.");
         }
@@ -39,7 +35,7 @@ public class PagamentoService {
         Execucao execucao = execucaoRepository.findById(execucaoId)
                 .orElseThrow(() -> new IllegalArgumentException("Execução não encontrada."));
 
-        // Validação de Saldo
+        // 2. Validação de Saldo (Regra de Negócio)
         List<Pagamento> pagamentosAnteriores = pagamentoRepository.findByExecucaoId(execucao.getId());
 
         BigDecimal somaPagamentos = BigDecimal.ZERO;
@@ -55,18 +51,24 @@ public class PagamentoService {
             throw new IllegalArgumentException("Valor excede o saldo devedor");
         }
 
+        // 3. Persistência
         pagamento.setExecucao(execucao);
         return pagamentoRepository.save(pagamento);
     }
 
+    /**
+     * Lista pagamentos vinculados a uma execução específica.
+     */
     public List<Pagamento> listarPorExecucao(Long execucaoId) {
-        return pagamentoRepository.findByExecucaoId(execucaoId);
+        // requireNonNull garante que não passamos null para o repositório
+        return pagamentoRepository.findByExecucaoId(Objects.requireNonNull(execucaoId));
     }
 
-    // --- CRUD ADICIONAL ---
+    // --- CRUD PADRÃO ---
 
     public Pagamento findById(Long id) {
-        return pagamentoRepository.findById(id)
+        // Correção aqui: Validamos o ID antes de passar
+        return pagamentoRepository.findById(Objects.requireNonNull(id))
                 .orElseThrow(() -> new ResourceNotFoundException("Pagamento não encontrado com ID: " + id));
     }
 
@@ -76,9 +78,12 @@ public class PagamentoService {
 
     @Transactional
     public void delete(Long id) {
-        if (!pagamentoRepository.existsById(id)) {
-            throw new ResourceNotFoundException("Pagamento não encontrado com ID: " + id);
+        // Correção aqui: Validamos o ID nas duas chamadas
+        Long safeId = Objects.requireNonNull(id);
+
+        if (!pagamentoRepository.existsById(safeId)) {
+            throw new ResourceNotFoundException("Pagamento não encontrado com ID: " + safeId);
         }
-        pagamentoRepository.deleteById(id);
+        pagamentoRepository.deleteById(safeId);
     }
 }
