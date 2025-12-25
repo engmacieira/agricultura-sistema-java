@@ -25,7 +25,7 @@ public class ExecucaoService {
     private ServicoService servicoService;
 
     public List<Execucao> listarTodos() {
-        return execucaoRepository.findAll();
+        return execucaoRepository.findAllCompleto();
     }
 
     public Execucao findById(Long id) {

@@ -4,6 +4,7 @@ import com.agricultura.sistema.model.Execucao;
 import com.agricultura.sistema.model.Pagamento;
 import com.agricultura.sistema.repository.ExecucaoRepository;
 import com.agricultura.sistema.service.PagamentoService;
+import com.agricultura.sistema.service.ExecucaoService;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
@@ -23,7 +24,7 @@ import java.util.Locale;
 public class PagamentoController {
 
     private final PagamentoService pagamentoService;
-    private final ExecucaoRepository execucaoRepository;
+    private final ExecucaoService execucaoService;
 
     @FXML
     private ComboBox<Execucao> cbExecucao;
@@ -87,7 +88,7 @@ public class PagamentoController {
     private void carregarExecucoes() {
         // Ideally filter only unpaid ones, but fetching all for now as per requirement
         // interpretation
-        List<Execucao> execucoes = execucaoRepository.findAll();
+        List<Execucao> execucoes = execucaoService.listarTodos();
         cbExecucao.setItems(FXCollections.observableArrayList(execucoes));
     }
 
