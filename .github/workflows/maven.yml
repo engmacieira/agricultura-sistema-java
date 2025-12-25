@@ -11,10 +11,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # 1. Baixa o código do repositório
+    # 1. Baixa o código
     - uses: actions/checkout@v4
 
-    # 2. Configura o Java 21 (Temurin é a distribuição padrão sólida)
+    # 2. Configura o Java 21
     - name: Set up JDK 21
       uses: actions/setup-java@v4
       with:
@@ -22,17 +22,22 @@ jobs:
         distribution: 'temurin'
         cache: 'maven'
 
-    # 3. Roda os Testes
-    # O comando 'clean test' limpa builds antigos e roda a bateria
-    # As flags headless já estão no pom.xml, mas aqui garantimos o ambiente
-    - name: Test with Maven
-      run: mvn clean test
+    # 3. Instala o Monitor Virtual (Xvfb) e bibliotecas gráficas necessárias
+    - name: Install Xvfb and Dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y xvfb libxrender1 libxtst6 libxi6 libgl1-mesa-glx
 
-    # 4. (Opcional) Publica o Relatório de Cobertura (JaCoCo)
-    # Isso permite que você baixe um ZIP no GitHub para ver o site do JaCoCo
+    # 4. Roda os Testes dentro do Monitor Virtual
+    # xvfb-run cria o ambiente gráfico falso antes de chamar o maven
+    - name: Test with Maven (with Xvfb)
+      run: xvfb-run --auto-servernum --server-args="-screen 0 1920x1080x24" mvn clean test jacoco:report
+
+    # 5. Publica o Relatório de Cobertura
+    # Agora o arquivo deve existir pois o mvn test vai conseguir terminar
     - name: Upload Coverage Report
       uses: actions/upload-artifact@v4
-      if: always() # Roda mesmo se os testes falharem
+      if: always() 
       with:
         name: jacoco-report
         path: target/site/jacoco/
