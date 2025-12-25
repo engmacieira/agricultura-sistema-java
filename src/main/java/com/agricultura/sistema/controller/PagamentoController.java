@@ -2,7 +2,6 @@ package com.agricultura.sistema.controller;
 
 import com.agricultura.sistema.model.Execucao;
 import com.agricultura.sistema.model.Pagamento;
-import com.agricultura.sistema.repository.ExecucaoRepository;
 import com.agricultura.sistema.service.PagamentoService;
 import com.agricultura.sistema.service.ExecucaoService;
 import javafx.beans.property.SimpleStringProperty;

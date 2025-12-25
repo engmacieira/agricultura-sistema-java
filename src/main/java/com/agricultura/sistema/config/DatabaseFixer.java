@@ -3,7 +3,6 @@ package com.agricultura.sistema.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Component;
 
 //@Component
 public class DatabaseFixer implements CommandLineRunner {
