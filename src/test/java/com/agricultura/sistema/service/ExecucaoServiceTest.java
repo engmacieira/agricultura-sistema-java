@@ -106,12 +106,12 @@ class ExecucaoServiceTest {
     @Test
     @DisplayName("Deve listar todas as execuções")
     void testListarTodos() {
-        when(execucaoRepository.findAll()).thenReturn(Arrays.asList(execucaoPadrao, new Execucao()));
+        when(execucaoRepository.findAllCompleto()).thenReturn(Arrays.asList(execucaoPadrao, new Execucao()));
 
         List<Execucao> lista = execucaoService.listarTodos();
 
         assertEquals(2, lista.size());
-        verify(execucaoRepository, times(1)).findAll();
+        verify(execucaoRepository, times(1)).findAllCompleto();
     }
 
     @Test

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BackupService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">sistema-agricultura</a> &gt; <a href="index.source.html" class="el_package">com.agricultura.sistema.service</a> &gt; <span class="el_source">BackupService.java</span></div><h1>BackupService.java</h1><pre class="source lang-java linenums">package com.agricultura.sistema.service;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.context.event.ApplicationReadyEvent;
+import org.springframework.context.event.EventListener;
+import org.springframework.stereotype.Service;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Arrays;
+import java.util.Comparator;
+
+@Service
+<span class="fc" id="L21">public class BackupService {</span>
+
+<span class="fc" id="L23">    private static final Logger logger = LoggerFactory.getLogger(BackupService.class);</span>
+    private static final String DB_FILENAME = &quot;gestao.db&quot;;
+    private static final String BACKUP_DIR = &quot;backups&quot;;
+    private static final int MAX_BACKUPS = 10;
+
+    @EventListener(ApplicationReadyEvent.class)
+    public void realizarBackupAoIniciar() {
+        try {
+<span class="fc" id="L31">            ensureBackupDirectoryExists();</span>
+
+<span class="fc" id="L33">            File sourceFile = new File(DB_FILENAME);</span>
+<span class="pc bpc" id="L34" title="1 of 2 branches missed.">            if (!sourceFile.exists()) {</span>
+<span class="nc" id="L35">                logger.warn(&quot;Arquivo de banco de dados não encontrado para backup: {}&quot;, DB_FILENAME);</span>
+<span class="nc" id="L36">                return;</span>
+            }
+
+<span class="fc" id="L39">            String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern(&quot;yyyy-MM-dd_HH-mm-ss&quot;));</span>
+<span class="fc" id="L40">            String backupFilename = &quot;backup_&quot; + timestamp + &quot;.db&quot;;</span>
+<span class="fc" id="L41">            Path targetPath = Paths.get(BACKUP_DIR, backupFilename);</span>
+
+<span class="fc" id="L43">            Files.copy(sourceFile.toPath(), targetPath, StandardCopyOption.REPLACE_EXISTING);</span>
+
+<span class="fc" id="L45">            manageBackupRotation();</span>
+
+            // Re-counting files for the log message
+<span class="fc" id="L48">            File backupDir = new File(BACKUP_DIR);</span>
+<span class="fc" id="L49">            int count = 0;</span>
+<span class="pc bpc" id="L50" title="2 of 4 branches missed.">            if (backupDir.exists() &amp;&amp; backupDir.isDirectory()) {</span>
+<span class="fc" id="L51">                File[] files = backupDir.listFiles();</span>
+<span class="pc bpc" id="L52" title="1 of 2 branches missed.">                if (files != null) {</span>
+<span class="fc" id="L53">                    count = files.length;</span>
+                }
+            }
+
+<span class="fc" id="L57">            logger.info(&quot;Backup automático realizado: {}. Backups mantidos: {}&quot;, backupFilename, count);</span>
+
+<span class="nc" id="L59">        } catch (IOException e) {</span>
+<span class="nc" id="L60">            logger.error(&quot;Falha ao realizar backup automático&quot;, e);</span>
+<span class="fc" id="L61">        }</span>
+<span class="fc" id="L62">    }</span>
+
+    public void restaurarBackup(File arquivoBackup) {
+<span class="nc bnc" id="L65" title="All 4 branches missed.">        if (arquivoBackup == null || !arquivoBackup.exists()) {</span>
+<span class="nc" id="L66">            throw new IllegalArgumentException(&quot;Arquivo de backup inválido.&quot;);</span>
+        }
+
+        try {
+<span class="nc" id="L70">            Path dbPath = Paths.get(DB_FILENAME);</span>
+            // Copia o backup sobrescrevendo o banco atual
+<span class="nc" id="L72">            Files.copy(arquivoBackup.toPath(), dbPath, StandardCopyOption.REPLACE_EXISTING);</span>
+<span class="nc" id="L73">            logger.info(&quot;Restauração de backup realizada com sucesso a partir de: {}&quot;, arquivoBackup.getName());</span>
+<span class="nc" id="L74">        } catch (IOException e) {</span>
+<span class="nc" id="L75">            logger.error(&quot;Falha ao restaurar backup&quot;, e);</span>
+<span class="nc" id="L76">            throw new RuntimeException(&quot;Falha ao restaurar backup: &quot; + e.getMessage(), e);</span>
+<span class="nc" id="L77">        }</span>
+<span class="nc" id="L78">    }</span>
+
+    private void ensureBackupDirectoryExists() {
+<span class="fc" id="L81">        File backupDir = new File(BACKUP_DIR);</span>
+<span class="pc bpc" id="L82" title="1 of 2 branches missed.">        if (!backupDir.exists()) {</span>
+<span class="nc bnc" id="L83" title="All 2 branches missed.">            if (backupDir.mkdirs()) {</span>
+<span class="nc" id="L84">                logger.info(&quot;Diretório de backups criado: {}&quot;, BACKUP_DIR);</span>
+            } else {
+<span class="nc" id="L86">                logger.error(&quot;Falha ao criar diretório de backups: {}&quot;, BACKUP_DIR);</span>
+            }
+        }
+<span class="fc" id="L89">    }</span>
+
+    private void manageBackupRotation() {
+<span class="fc" id="L92">        File backupDir = new File(BACKUP_DIR);</span>
+<span class="pc bpc" id="L93" title="2 of 4 branches missed.">        if (!backupDir.exists() || !backupDir.isDirectory()) {</span>
+<span class="nc" id="L94">            return;</span>
+        }
+
+<span class="fc" id="L97">        File[] files = backupDir.listFiles();</span>
+<span class="pc bpc" id="L98" title="2 of 4 branches missed.">        if (files == null || files.length &lt;= MAX_BACKUPS) {</span>
+<span class="nc" id="L99">            return;</span>
+        }
+
+        // Ordenar por data de modificação (mais antigos primeiro)
+        // Nota: Nome do arquivo contém timestamp, mas lastModified deve ser suficiente
+        // e seguro.
+        // Se quiser garantir pelo nome, teria que fazer parsing, mas lastModified no
+        // sistema de arquivos deve bater com a criação.
+        // O prompt pede: &quot;Ordene-os por data (mais antigos primeiro)&quot;
+<span class="fc" id="L108">        Arrays.stream(files)</span>
+<span class="fc" id="L109">                .sorted(Comparator.comparingLong(File::lastModified))</span>
+<span class="fc" id="L110">                .limit(files.length - MAX_BACKUPS)</span>
+<span class="fc" id="L111">                .forEach(file -&gt; {</span>
+<span class="pc bpc" id="L112" title="1 of 2 branches missed.">                    if (file.delete()) {</span>
+<span class="fc" id="L113">                        logger.info(&quot;Backup antigo removido pela rotação: {}&quot;, file.getName());</span>
+                    } else {
+<span class="nc" id="L115">                        logger.warn(&quot;Falha ao remover backup antigo: {}&quot;, file.getName());</span>
+                    }
+<span class="fc" id="L117">                });</span>
+<span class="fc" id="L118">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

@@ -1,3 +1,4 @@
+com\agricultura\sistema\FluxoNavegacaoTest.class
 com\agricultura\sistema\IntegrationTestBase.class
 com\agricultura\sistema\service\ProdutorServiceTest.class
 com\agricultura\sistema\service\RelatorioServiceTest.class

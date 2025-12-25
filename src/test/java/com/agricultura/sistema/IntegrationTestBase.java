@@ -1,6 +1,5 @@
 package com.agricultura.sistema;
 
-import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -15,6 +14,7 @@ import org.testfx.api.FxToolkit;
 import org.testfx.framework.junit5.ApplicationExtension;
 import org.testfx.util.WaitForAsyncUtils;
 
+import java.time.Instant;
 import java.util.concurrent.TimeoutException;
 
 @ExtendWith(ApplicationExtension.class)
@@ -26,16 +26,15 @@ public abstract class IntegrationTestBase {
 
     @BeforeAll
     public static void setupSpec() throws Exception {
-        // 1. Configurações de Sistema
+        // Força configurações de vídeo para evitar modo headless acidental
         System.setProperty("java.awt.headless", "false");
         System.setProperty("testfx.robot", "glass");
         System.setProperty("testfx.headless", "false");
         System.setProperty("prism.order", "sw");
 
-        // 2. Garante que o JavaFX Thread esteja vivo
+        // Registra o Stage primário uma única vez
         try {
             FxToolkit.registerPrimaryStage();
-            Platform.setImplicitExit(false);
         } catch (Exception e) {
             // Ignora se já estiver registrado
         }
@@ -43,40 +42,34 @@ public abstract class IntegrationTestBase {
 
     @BeforeEach
     public void setup() throws Exception {
-        System.err.println(">>> SETUP: Iniciando configuração manual do Stage...");
-
-        // 3. Configuração MANUAL do Stage (Substitui o @Start que estava falhando)
+        // Configuração MANUAL do Stage (A que funcionava para você!)
         FxToolkit.setupStage(stage -> {
             try {
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/main.fxml"));
+                // O PULO DO GATO: Injeção do Spring
                 fxmlLoader.setControllerFactory(applicationContext::getBean);
                 Parent root = fxmlLoader.load();
 
                 Scene scene = new Scene(root, 1200, 800);
                 stage.setScene(scene);
-                stage.setTitle("Sistema Agricultura - Teste E2E");
+                stage.setTitle("Teste E2E - " + Instant.now()); // Muda o título para vermos que atualizou
 
                 stage.show();
                 stage.toFront();
                 stage.requestFocus();
-
-                System.err.println(">>> SETUP: Scene carregada com sucesso! Root: " + root);
             } catch (Exception e) {
-                System.err.println(">>> ERRO NO SETUP DO STAGE: " + e.getMessage());
-                e.printStackTrace();
-                throw new RuntimeException("Falha ao carregar FXML no teste", e);
+                throw new RuntimeException("Falha ao carregar FXML no setup manual", e);
             }
         });
 
-        // 4. Espera tudo renderizar antes de liberar para o teste
+        // Espera a janela renderizar totalmente antes de soltar para o teste
         WaitForAsyncUtils.waitForFxEvents();
     }
 
     @AfterEach
     public void tearDown() throws TimeoutException {
+        // Limpa o palco para o próximo teste não herdar lixo
         FxToolkit.hideStage();
         WaitForAsyncUtils.waitForFxEvents();
     }
-
-    // NOTA: O método @Start foi removido intencionalmente para evitar conflitos.
 }

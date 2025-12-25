@@ -132,6 +132,7 @@
 						-Dtestfx.robot=glass
 						-Dtestfx.headless=false
 						-Dprism.order=sw
+						-Djdk.net.URLClassPath.disableClassPathURLCheck=true
 						--add-opens java.base/java.lang=ALL-UNNAMED
 						--add-opens java.base/java.lang.reflect=ALL-UNNAMED
 						--add-opens java.base/java.util=ALL-UNNAMED

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ServicoController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">sistema-agricultura</a> &gt; <a href="index.source.html" class="el_package">com.agricultura.sistema.controller</a> &gt; <span class="el_source">ServicoController.java</span></div><h1>ServicoController.java</h1><pre class="source lang-java linenums">package com.agricultura.sistema.controller;
+
+import com.agricultura.sistema.model.Servico;
+import com.agricultura.sistema.service.ServicoService;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import java.math.BigDecimal;
+import java.util.Optional;
+
+@Component
+<span class="fc" id="L20">public class ServicoController {</span>
+
+    @Autowired
+    private ServicoService servicoService;
+
+    @FXML
+    private TextField txtNome;
+    @FXML
+    private TextField txtValor;
+
+    @FXML
+    private TableView&lt;Servico&gt; tabelaServicos;
+
+    @FXML
+    private TableColumn&lt;Servico, Long&gt; colId;
+    @FXML
+    private TableColumn&lt;Servico, String&gt; colNome;
+    @FXML
+    private TableColumn&lt;Servico, BigDecimal&gt; colValor;
+
+<span class="fc" id="L40">    private ObservableList&lt;Servico&gt; listaServicos = FXCollections.observableArrayList();</span>
+    private Servico servicoAtual;
+
+    @FXML
+    public void initialize() {
+<span class="fc" id="L45">        carregarServicos();</span>
+
+<span class="fc" id="L47">        tabelaServicos.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -&gt; {</span>
+<span class="nc bnc" id="L48" title="All 2 branches missed.">            if (newSelection != null) {</span>
+                // Optional: preencherFormulario(newSelection);
+            }
+<span class="nc" id="L51">        });</span>
+<span class="fc" id="L52">    }</span>
+
+    private void carregarServicos() {
+<span class="fc" id="L55">        listaServicos.clear();</span>
+<span class="fc" id="L56">        listaServicos.addAll(servicoService.listarTodos());</span>
+<span class="fc" id="L57">        tabelaServicos.setItems(listaServicos);</span>
+<span class="fc" id="L58">    }</span>
+
+    @FXML
+    public void onSalvar() {
+<span class="nc bnc" id="L62" title="All 2 branches missed.">        if (servicoAtual == null) {</span>
+<span class="nc" id="L63">            servicoAtual = new Servico();</span>
+        }
+
+        try {
+<span class="nc" id="L67">            servicoAtual.setNome(txtNome.getText());</span>
+<span class="nc" id="L68">            servicoAtual.setValorUnitario(new BigDecimal(txtValor.getText().replace(&quot;,&quot;, &quot;.&quot;)));</span>
+
+<span class="nc bnc" id="L70" title="All 2 branches missed.">            if (servicoAtual.getId() == null) {</span>
+<span class="nc" id="L71">                servicoService.create(servicoAtual);</span>
+            } else {
+<span class="nc" id="L73">                servicoService.update(servicoAtual.getId(), servicoAtual);</span>
+            }
+<span class="nc" id="L75">            mostrarAlerta(&quot;Sucesso&quot;, &quot;Serviço salvo com sucesso!&quot;, Alert.AlertType.INFORMATION);</span>
+<span class="nc" id="L76">            limparFormulario();</span>
+<span class="nc" id="L77">            carregarServicos();</span>
+<span class="nc" id="L78">        } catch (NumberFormatException e) {</span>
+<span class="nc" id="L79">            mostrarAlerta(&quot;Erro&quot;, &quot;Valor inválido. Use ponto ou vírgula.&quot;, Alert.AlertType.ERROR);</span>
+<span class="nc" id="L80">        } catch (Exception e) {</span>
+<span class="nc" id="L81">            mostrarAlerta(&quot;Erro&quot;, &quot;Erro ao salvar serviço: &quot; + e.getMessage(), Alert.AlertType.ERROR);</span>
+<span class="nc" id="L82">        }</span>
+<span class="nc" id="L83">    }</span>
+
+    @FXML
+    public void onEditar() {
+<span class="nc" id="L87">        Servico selecionado = tabelaServicos.getSelectionModel().getSelectedItem();</span>
+<span class="nc bnc" id="L88" title="All 2 branches missed.">        if (selecionado != null) {</span>
+<span class="nc" id="L89">            preencherFormulario(selecionado);</span>
+        } else {
+<span class="nc" id="L91">            mostrarAlerta(&quot;Aviso&quot;, &quot;Selecione um serviço para editar.&quot;, Alert.AlertType.WARNING);</span>
+        }
+<span class="nc" id="L93">    }</span>
+
+    @FXML
+    public void onExcluir() {
+<span class="nc" id="L97">        Servico selecionado = tabelaServicos.getSelectionModel().getSelectedItem();</span>
+<span class="nc bnc" id="L98" title="All 2 branches missed.">        if (selecionado != null) {</span>
+<span class="nc" id="L99">            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);</span>
+<span class="nc" id="L100">            alert.setTitle(&quot;Confirmação de Exclusão&quot;);</span>
+<span class="nc" id="L101">            alert.setHeaderText(&quot;Excluir Serviço&quot;);</span>
+<span class="nc" id="L102">            alert.setContentText(&quot;Tem certeza que deseja excluir o serviço &quot; + selecionado.getNome() + &quot;?&quot;);</span>
+
+<span class="nc" id="L104">            Optional&lt;ButtonType&gt; result = alert.showAndWait();</span>
+<span class="nc bnc" id="L105" title="All 4 branches missed.">            if (result.isPresent() &amp;&amp; result.get() == ButtonType.OK) {</span>
+                try {
+<span class="nc" id="L107">                    servicoService.delete(selecionado.getId());</span>
+<span class="nc" id="L108">                    carregarServicos();</span>
+<span class="nc" id="L109">                    limparFormularioIfSelected(selecionado);</span>
+<span class="nc" id="L110">                    mostrarAlerta(&quot;Sucesso&quot;, &quot;Serviço excluído com sucesso!&quot;, Alert.AlertType.INFORMATION);</span>
+<span class="nc" id="L111">                } catch (Exception e) {</span>
+<span class="nc" id="L112">                    mostrarAlerta(&quot;Erro&quot;, &quot;Erro ao excluir serviço: &quot; + e.getMessage(), Alert.AlertType.ERROR);</span>
+<span class="nc" id="L113">                }</span>
+            }
+<span class="nc" id="L115">        } else {</span>
+<span class="nc" id="L116">            mostrarAlerta(&quot;Aviso&quot;, &quot;Selecione um serviço para excluir.&quot;, Alert.AlertType.WARNING);</span>
+        }
+<span class="nc" id="L118">    }</span>
+
+    @FXML
+    public void onLimpar() {
+<span class="nc" id="L122">        limparFormulario();</span>
+<span class="nc" id="L123">    }</span>
+
+    private void preencherFormulario(Servico servico) {
+<span class="nc" id="L126">        servicoAtual = servico;</span>
+<span class="nc" id="L127">        txtNome.setText(servico.getNome());</span>
+<span class="nc" id="L128">        txtValor.setText(servico.getValorUnitario().toString());</span>
+<span class="nc" id="L129">    }</span>
+
+    private void limparFormulario() {
+<span class="nc" id="L132">        servicoAtual = null;</span>
+<span class="nc" id="L133">        txtNome.clear();</span>
+<span class="nc" id="L134">        txtValor.clear();</span>
+<span class="nc" id="L135">    }</span>
+
+    private void limparFormularioIfSelected(Servico servicoExcluido) {
+<span class="nc bnc" id="L138" title="All 4 branches missed.">        if (servicoAtual != null &amp;&amp; servicoAtual.getId().equals(servicoExcluido.getId())) {</span>
+<span class="nc" id="L139">            limparFormulario();</span>
+        }
+<span class="nc" id="L141">    }</span>
+
+    private void mostrarAlerta(String titulo, String conteudo, Alert.AlertType tipo) {
+<span class="nc" id="L144">        Alert alert = new Alert(tipo);</span>
+<span class="nc" id="L145">        alert.setTitle(titulo);</span>
+<span class="nc" id="L146">        alert.setHeaderText(null);</span>
+<span class="nc" id="L147">        alert.setContentText(conteudo);</span>
+<span class="nc" id="L148">        alert.showAndWait();</span>
+<span class="nc" id="L149">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ExecucaoController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">sistema-agricultura</a> &gt; <a href="index.source.html" class="el_package">com.agricultura.sistema.controller</a> &gt; <span class="el_source">ExecucaoController.java</span></div><h1>ExecucaoController.java</h1><pre class="source lang-java linenums">package com.agricultura.sistema.controller;
+
+import com.agricultura.sistema.model.Execucao;
+import com.agricultura.sistema.model.Produtor;
+import com.agricultura.sistema.model.Servico;
+import com.agricultura.sistema.service.ExecucaoService;
+import com.agricultura.sistema.service.ProdutorService;
+import com.agricultura.sistema.service.ServicoService;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
+import javafx.util.StringConverter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import java.math.BigDecimal;
+import java.time.format.DateTimeFormatter;
+import java.util.Optional;
+
+@Component
+<span class="fc" id="L23">public class ExecucaoController {</span>
+
+    @Autowired
+    private ExecucaoService execucaoService;
+
+    @Autowired
+    private ProdutorService produtorService;
+
+    @Autowired
+    private ServicoService servicoService;
+
+    @FXML
+    private ComboBox&lt;Produtor&gt; cmbProdutor;
+    @FXML
+    private ComboBox&lt;Servico&gt; cmbServico;
+    @FXML
+    private DatePicker dtDataExecucao;
+    @FXML
+    private TextField txtHoras;
+    @FXML
+    private TextField txtValorTotal;
+
+    @FXML
+    private TableView&lt;Execucao&gt; tabelaExecucoes;
+
+    @FXML
+    private TableColumn&lt;Execucao, Long&gt; colId;
+    @FXML
+    private TableColumn&lt;Execucao, String&gt; colProdutor;
+    @FXML
+    private TableColumn&lt;Execucao, String&gt; colServico;
+    @FXML
+    private TableColumn&lt;Execucao, String&gt; colData;
+    @FXML
+    private TableColumn&lt;Execucao, BigDecimal&gt; colHoras;
+    @FXML
+    private TableColumn&lt;Execucao, BigDecimal&gt; colTotal;
+
+<span class="fc" id="L61">    private ObservableList&lt;Execucao&gt; listaExecucoes = FXCollections.observableArrayList();</span>
+    private Execucao execucaoAtual;
+
+    @FXML
+    public void initialize() {
+<span class="fc" id="L66">        configurarComboBoxes();</span>
+<span class="fc" id="L67">        configurarTabela();</span>
+<span class="fc" id="L68">        carregarExecucoes();</span>
+
+        // Auto-calculate logic (optional visual enhancement)
+<span class="pc" id="L71">        txtHoras.textProperty().addListener((obs, oldVal, newVal) -&gt; calcularPreviaTotal());</span>
+<span class="pc" id="L72">        cmbServico.valueProperty().addListener((obs, oldVal, newVal) -&gt; calcularPreviaTotal());</span>
+<span class="fc" id="L73">    }</span>
+
+    private void configurarComboBoxes() {
+<span class="fc" id="L76">        cmbProdutor.setItems(FXCollections.observableArrayList(produtorService.listarTodos()));</span>
+<span class="fc" id="L77">        cmbProdutor.setConverter(new StringConverter&lt;Produtor&gt;() {</span>
+            @Override
+            public String toString(Produtor produtor) {
+<span class="pc bpc" id="L80" title="1 of 2 branches missed.">                return produtor != null ? produtor.getNome() : &quot;&quot;;</span>
+            }
+
+            @Override
+            public Produtor fromString(String s) {
+<span class="nc" id="L85">                return null; // Not needed for selection-only combo</span>
+            }
+        });
+
+<span class="fc" id="L89">        cmbServico.setItems(FXCollections.observableArrayList(servicoService.listarTodos()));</span>
+<span class="fc" id="L90">        cmbServico.setConverter(new StringConverter&lt;Servico&gt;() {</span>
+            @Override
+            public String toString(Servico servico) {
+<span class="pc bpc" id="L93" title="1 of 2 branches missed.">                return servico != null ? servico.getNome() + &quot; (R$ &quot; + servico.getValorUnitario() + &quot;/h)&quot; : &quot;&quot;;</span>
+            }
+
+            @Override
+            public Servico fromString(String s) {
+<span class="nc" id="L98">                return null;</span>
+            }
+        });
+<span class="fc" id="L101">    }</span>
+
+    private void configurarTabela() {
+<span class="fc" id="L104">        colProdutor</span>
+<span class="fc" id="L105">                .setCellValueFactory(cellData -&gt; new SimpleStringProperty(cellData.getValue().getProdutor().getNome()));</span>
+<span class="fc" id="L106">        colServico</span>
+<span class="fc" id="L107">                .setCellValueFactory(cellData -&gt; new SimpleStringProperty(cellData.getValue().getServico().getNome()));</span>
+
+<span class="fc" id="L109">        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(&quot;dd/MM/yyyy&quot;);</span>
+<span class="fc" id="L110">        colData.setCellValueFactory(</span>
+<span class="fc" id="L111">                cellData -&gt; new SimpleStringProperty(cellData.getValue().getDataExecucao().format(formatter)));</span>
+
+<span class="fc" id="L113">        colHoras.setCellValueFactory(new javafx.scene.control.cell.PropertyValueFactory&lt;&gt;(&quot;horasPrestadas&quot;));</span>
+<span class="fc" id="L114">        colTotal.setCellValueFactory(new javafx.scene.control.cell.PropertyValueFactory&lt;&gt;(&quot;valorTotal&quot;));</span>
+<span class="fc" id="L115">    }</span>
+
+    private void carregarExecucoes() {
+<span class="fc" id="L118">        listaExecucoes.clear();</span>
+<span class="fc" id="L119">        listaExecucoes.addAll(execucaoService.listarTodos());</span>
+<span class="fc" id="L120">        tabelaExecucoes.setItems(listaExecucoes);</span>
+<span class="fc" id="L121">    }</span>
+
+    private void calcularPreviaTotal() {
+        try {
+<span class="nc bnc" id="L125" title="All 4 branches missed.">            if (cmbServico.getValue() != null &amp;&amp; !txtHoras.getText().isEmpty()) {</span>
+<span class="nc" id="L126">                BigDecimal horas = new BigDecimal(txtHoras.getText().replace(&quot;,&quot;, &quot;.&quot;));</span>
+<span class="nc" id="L127">                BigDecimal total = cmbServico.getValue().getValorUnitario().multiply(horas);</span>
+<span class="nc" id="L128">                txtValorTotal.setText(String.format(&quot;R$ %.2f&quot;, total));</span>
+<span class="nc" id="L129">            } else {</span>
+<span class="nc" id="L130">                txtValorTotal.clear();</span>
+            }
+<span class="nc" id="L132">        } catch (Exception e) {</span>
+<span class="nc" id="L133">            txtValorTotal.setText(&quot;Erro&quot;);</span>
+<span class="nc" id="L134">        }</span>
+<span class="nc" id="L135">    }</span>
+
+    @FXML
+    public void onSalvar() {
+<span class="nc bnc" id="L139" title="All 2 branches missed.">        if (execucaoAtual == null) {</span>
+<span class="nc" id="L140">            execucaoAtual = new Execucao();</span>
+        }
+
+        try {
+<span class="nc" id="L144">            execucaoAtual.setProdutor(cmbProdutor.getValue());</span>
+<span class="nc" id="L145">            execucaoAtual.setServico(cmbServico.getValue());</span>
+<span class="nc" id="L146">            execucaoAtual.setDataExecucao(dtDataExecucao.getValue());</span>
+<span class="nc" id="L147">            execucaoAtual.setHorasPrestadas(new BigDecimal(txtHoras.getText().replace(&quot;,&quot;, &quot;.&quot;)));</span>
+
+<span class="nc bnc" id="L149" title="All 4 branches missed.">            if (execucaoAtual.getProdutor() == null || execucaoAtual.getServico() == null</span>
+<span class="nc bnc" id="L150" title="All 2 branches missed.">                    || execucaoAtual.getDataExecucao() == null) {</span>
+<span class="nc" id="L151">                mostrarAlerta(&quot;Erro&quot;, &quot;Preencha todos os campos obrigatórios.&quot;, Alert.AlertType.ERROR);</span>
+<span class="nc" id="L152">                return;</span>
+            }
+
+<span class="nc bnc" id="L155" title="All 2 branches missed.">            if (execucaoAtual.getId() == null) {</span>
+<span class="nc" id="L156">                execucaoService.create(execucaoAtual);</span>
+            } else {
+<span class="nc" id="L158">                execucaoService.update(execucaoAtual.getId(), execucaoAtual);</span>
+            }
+<span class="nc" id="L160">            mostrarAlerta(&quot;Sucesso&quot;, &quot;Execução salva com sucesso!&quot;, Alert.AlertType.INFORMATION);</span>
+<span class="nc" id="L161">            limparFormulario();</span>
+<span class="nc" id="L162">            carregarExecucoes();</span>
+<span class="nc" id="L163">        } catch (NumberFormatException e) {</span>
+<span class="nc" id="L164">            mostrarAlerta(&quot;Erro&quot;, &quot;Valor de horas inválido.&quot;, Alert.AlertType.ERROR);</span>
+<span class="nc" id="L165">        } catch (Exception e) {</span>
+<span class="nc" id="L166">            mostrarAlerta(&quot;Erro&quot;, &quot;Erro ao salvar execução: &quot; + e.getMessage(), Alert.AlertType.ERROR);</span>
+<span class="nc" id="L167">        }</span>
+<span class="nc" id="L168">    }</span>
+
+    @FXML
+    public void onEditar() {
+<span class="nc" id="L172">        Execucao selecionada = tabelaExecucoes.getSelectionModel().getSelectedItem();</span>
+<span class="nc bnc" id="L173" title="All 2 branches missed.">        if (selecionada != null) {</span>
+<span class="nc" id="L174">            preencherFormulario(selecionada);</span>
+        } else {
+<span class="nc" id="L176">            mostrarAlerta(&quot;Aviso&quot;, &quot;Selecione uma execução para editar.&quot;, Alert.AlertType.WARNING);</span>
+        }
+<span class="nc" id="L178">    }</span>
+
+    @FXML
+    public void onExcluir() {
+<span class="nc" id="L182">        Execucao selecionada = tabelaExecucoes.getSelectionModel().getSelectedItem();</span>
+<span class="nc bnc" id="L183" title="All 2 branches missed.">        if (selecionada != null) {</span>
+<span class="nc" id="L184">            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);</span>
+<span class="nc" id="L185">            alert.setTitle(&quot;Confirmação de Exclusão&quot;);</span>
+<span class="nc" id="L186">            alert.setHeaderText(&quot;Excluir Execução&quot;);</span>
+<span class="nc" id="L187">            alert.setContentText(&quot;Tem certeza que deseja excluir esta execução?&quot;);</span>
+
+<span class="nc" id="L189">            Optional&lt;ButtonType&gt; result = alert.showAndWait();</span>
+<span class="nc bnc" id="L190" title="All 4 branches missed.">            if (result.isPresent() &amp;&amp; result.get() == ButtonType.OK) {</span>
+                try {
+<span class="nc" id="L192">                    execucaoService.delete(selecionada.getId());</span>
+<span class="nc" id="L193">                    carregarExecucoes();</span>
+<span class="nc" id="L194">                    limparFormularioIfSelected(selecionada);</span>
+<span class="nc" id="L195">                    mostrarAlerta(&quot;Sucesso&quot;, &quot;Execução excluída com sucesso!&quot;, Alert.AlertType.INFORMATION);</span>
+<span class="nc" id="L196">                } catch (Exception e) {</span>
+<span class="nc" id="L197">                    mostrarAlerta(&quot;Erro&quot;, &quot;Erro ao excluir execução: &quot; + e.getMessage(), Alert.AlertType.ERROR);</span>
+<span class="nc" id="L198">                }</span>
+            }
+<span class="nc" id="L200">        } else {</span>
+<span class="nc" id="L201">            mostrarAlerta(&quot;Aviso&quot;, &quot;Selecione uma execução para excluir.&quot;, Alert.AlertType.WARNING);</span>
+        }
+<span class="nc" id="L203">    }</span>
+
+    @FXML
+    public void onLimpar() {
+<span class="nc" id="L207">        limparFormulario();</span>
+<span class="nc" id="L208">    }</span>
+
+    private void preencherFormulario(Execucao execucao) {
+<span class="nc" id="L211">        execucaoAtual = execucao;</span>
+
+        // Populate fields
+        // For ComboBoxes, we need to find the matching item in the list
+<span class="nc" id="L215">        cmbProdutor.getItems().stream()</span>
+<span class="nc" id="L216">                .filter(p -&gt; p.getId().equals(execucao.getProdutor().getId()))</span>
+<span class="nc" id="L217">                .findFirst()</span>
+<span class="nc" id="L218">                .ifPresent(cmbProdutor::setValue);</span>
+
+<span class="nc" id="L220">        cmbServico.getItems().stream()</span>
+<span class="nc" id="L221">                .filter(s -&gt; s.getId().equals(execucao.getServico().getId()))</span>
+<span class="nc" id="L222">                .findFirst()</span>
+<span class="nc" id="L223">                .ifPresent(cmbServico::setValue);</span>
+
+<span class="nc" id="L225">        dtDataExecucao.setValue(execucao.getDataExecucao());</span>
+<span class="nc" id="L226">        txtHoras.setText(execucao.getHorasPrestadas().toString());</span>
+<span class="nc" id="L227">        calcularPreviaTotal();</span>
+<span class="nc" id="L228">    }</span>
+
+    private void limparFormulario() {
+<span class="nc" id="L231">        execucaoAtual = null;</span>
+<span class="nc" id="L232">        cmbProdutor.setValue(null);</span>
+<span class="nc" id="L233">        cmbServico.setValue(null);</span>
+<span class="nc" id="L234">        dtDataExecucao.setValue(null);</span>
+<span class="nc" id="L235">        txtHoras.clear();</span>
+<span class="nc" id="L236">        txtValorTotal.clear();</span>
+<span class="nc" id="L237">    }</span>
+
+    private void limparFormularioIfSelected(Execucao execucaoExcluida) {
+<span class="nc bnc" id="L240" title="All 4 branches missed.">        if (execucaoAtual != null &amp;&amp; execucaoAtual.getId().equals(execucaoExcluida.getId())) {</span>
+<span class="nc" id="L241">            limparFormulario();</span>
+        }
+<span class="nc" id="L243">    }</span>
+
+    private void mostrarAlerta(String titulo, String conteudo, Alert.AlertType tipo) {
+<span class="nc" id="L246">        Alert alert = new Alert(tipo);</span>
+<span class="nc" id="L247">        alert.setTitle(titulo);</span>
+<span class="nc" id="L248">        alert.setHeaderText(null);</span>
+<span class="nc" id="L249">        alert.setContentText(conteudo);</span>
+<span class="nc" id="L250">        alert.showAndWait();</span>
+<span class="nc" id="L251">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
