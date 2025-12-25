@@ -22,19 +22,13 @@ jobs:
         distribution: 'temurin'
         cache: 'maven'
 
-    # 3. Instala o Monitor Virtual (Xvfb) e bibliotecas gráficas necessárias
-    - name: Install Xvfb and Dependencies
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y xvfb libxrender1 libxtst6 libxi6 libgl1-mesa-glx
+    # REMOVIDO: O passo "Install Xvfb" não é necessário, pois já vem na imagem padrão.
 
-    # 4. Roda os Testes dentro do Monitor Virtual
-    # xvfb-run cria o ambiente gráfico falso antes de chamar o maven
+    # 3. Roda os Testes usando o Xvfb pré-instalado
     - name: Test with Maven (with Xvfb)
       run: xvfb-run --auto-servernum --server-args="-screen 0 1920x1080x24" mvn clean test jacoco:report
 
-    # 5. Publica o Relatório de Cobertura
-    # Agora o arquivo deve existir pois o mvn test vai conseguir terminar
+    # 4. Publica o Relatório
     - name: Upload Coverage Report
       uses: actions/upload-artifact@v4
       if: always() 
